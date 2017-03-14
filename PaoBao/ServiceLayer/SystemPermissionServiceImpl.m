@@ -43,21 +43,24 @@
         else if (status == PHAuthorizationStatusNotDetermined)
         {
             [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
-                if (status == PHAuthorizationStatusAuthorized)
-                {
-                    succeedHandler();
-                }
-                else
-                {
-                    if (IS_IOS8_OR_HIGHER && [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]]) {
-                        failedHandle(true);
-                        return;
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if (status == PHAuthorizationStatusAuthorized)
+                    {
+                        succeedHandler();
                     }
-                    else {
-                        failedHandle(false);
-                        return;
+                    else
+                    {
+                        if (IS_IOS8_OR_HIGHER && [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]]) {
+                            failedHandle(true);
+                            return;
+                        }
+                        else {
+                            failedHandle(false);
+                            return;
+                        }
                     }
-                }
+                });
+
             }];
         }
         else
