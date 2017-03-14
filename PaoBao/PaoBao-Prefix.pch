@@ -1,0 +1,41 @@
+//
+//  PaoBao-Prefix.pch
+//  PaoBao
+//
+//  Created by wujian on 2017/3/13.
+//  Copyright © 2017年 wujian. All rights reserved.
+//
+
+#ifndef PaoBao_Prefix_pch
+#define PaoBao_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#define PB_Debug 0
+// 是否是iOS 7或者更高版本
+#define IS_IOS7_OR_HIGHER      (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0"))
+#define IS_IOS8_OR_HIGHER      (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0"))
+#define IS_IOS9_OR_HIGHER      (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"9.0"))
+#define IS_IOS10_OR_HIGHER      (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"10.0"))
+
+#define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
+#define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
+
+
+//#define PBSend(instance, protocol, selector, message) @try {[(id<protocol>)(instance) message]} @catch (NSException *exception) { NSLog(@"the protocol method error: self.baseController:%@   cannot find selector:%@",NSStringFromClass([instance class]),NSStringFromSelector(selector));} @finally {}
+
+#define PBSend(instance, protocol, message) [(id<protocol>)(instance) message]
+
+#if PB_Debug
+
+
+#else
+
+
+#endif
+
+
+#endif /* PaoBao_Prefix_pch */
