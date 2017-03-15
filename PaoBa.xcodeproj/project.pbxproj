@@ -1,0 +1,534 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AE380C481E76A240008F4036 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380C471E76A240008F4036 /* main.m */; };
+		AE380C4B1E76A240008F4036 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380C4A1E76A240008F4036 /* AppDelegate.m */; };
+		AE380C531E76A240008F4036 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE380C521E76A240008F4036 /* Assets.xcassets */; };
+		AE380C561E76A240008F4036 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE380C541E76A240008F4036 /* LaunchScreen.storyboard */; };
+		AE380C671E76A300008F4036 /* ServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380C5F1E76A300008F4036 /* ServiceFactory.m */; };
+		AE380C681E76A300008F4036 /* SystemPermissionServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380C641E76A300008F4036 /* SystemPermissionServiceImpl.m */; };
+		AE380C691E76A300008F4036 /* UserLogicServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380C661E76A300008F4036 /* UserLogicServiceImpl.m */; };
+		AE380C6E1E7787B9008F4036 /* NSObject+BaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380C6D1E7787B9008F4036 /* NSObject+BaseController.m */; };
+		AE380C731E778A38008F4036 /* PBMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380C721E778A38008F4036 /* PBMainController.m */; };
+		AE380C761E778ACB008F4036 /* PBMainInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380C751E778ACB008F4036 /* PBMainInteractor.m */; };
+		AE380C791E778B00008F4036 /* PBMainPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380C781E778B00008F4036 /* PBMainPresenter.m */; };
+		AE380C7D1E778B43008F4036 /* PBInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380C7C1E778B43008F4036 /* PBInteractor.m */; };
+		AE380C801E778B54008F4036 /* PBPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380C7F1E778B54008F4036 /* PBPresenter.m */; };
+		AE380C831E778B65008F4036 /* PBController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380C821E778B65008F4036 /* PBController.m */; };
+		AE380C891E77949D008F4036 /* PBMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380C881E77949D008F4036 /* PBMainView.m */; };
+		AE380C9D1E77B9A4008F4036 /* PBSecondController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380C901E77B9A4008F4036 /* PBSecondController.m */; };
+		AE380C9E1E77B9A4008F4036 /* PBSecondInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380C921E77B9A4008F4036 /* PBSecondInteractor.m */; };
+		AE380C9F1E77B9A4008F4036 /* PBSecondPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380C941E77B9A4008F4036 /* PBSecondPresenter.m */; };
+		AE380CA01E77B9A4008F4036 /* PBSecondView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380C9C1E77B9A4008F4036 /* PBSecondView.m */; };
+		AE380CD51E77BFB8008F4036 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE380CD41E77BFB8008F4036 /* AssetsLibrary.framework */; };
+		AE380CDB1E77C356008F4036 /* PBCView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380CDA1E77C356008F4036 /* PBCView.m */; };
+		AE380CDE1E77D51C008F4036 /* PBTestSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380CDD1E77D51C008F4036 /* PBTestSubView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AE380C431E76A240008F4036 /* PaoBa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaoBa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE380C471E76A240008F4036 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AE380C491E76A240008F4036 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AE380C4A1E76A240008F4036 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AE380C521E76A240008F4036 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AE380C551E76A240008F4036 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AE380C571E76A240008F4036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE380C5E1E76A300008F4036 /* ServiceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceFactory.h; sourceTree = "<group>"; };
+		AE380C5F1E76A300008F4036 /* ServiceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceFactory.m; sourceTree = "<group>"; };
+		AE380C611E76A300008F4036 /* SystemPermissionServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemPermissionServiceProtocol.h; sourceTree = "<group>"; };
+		AE380C621E76A300008F4036 /* UserLogicServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLogicServiceProtocol.h; sourceTree = "<group>"; };
+		AE380C631E76A300008F4036 /* SystemPermissionServiceImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemPermissionServiceImpl.h; sourceTree = "<group>"; };
+		AE380C641E76A300008F4036 /* SystemPermissionServiceImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemPermissionServiceImpl.m; sourceTree = "<group>"; };
+		AE380C651E76A300008F4036 /* UserLogicServiceImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLogicServiceImpl.h; sourceTree = "<group>"; };
+		AE380C661E76A300008F4036 /* UserLogicServiceImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLogicServiceImpl.m; sourceTree = "<group>"; };
+		AE380C6A1E76B46A008F4036 /* PaoBa-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PaoBa-Prefix.pch"; sourceTree = "<group>"; };
+		AE380C6C1E7787B9008F4036 /* NSObject+BaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+BaseController.h"; sourceTree = "<group>"; };
+		AE380C6D1E7787B9008F4036 /* NSObject+BaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BaseController.m"; sourceTree = "<group>"; };
+		AE380C711E778A38008F4036 /* PBMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBMainController.h; sourceTree = "<group>"; };
+		AE380C721E778A38008F4036 /* PBMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBMainController.m; sourceTree = "<group>"; };
+		AE380C741E778ACB008F4036 /* PBMainInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBMainInteractor.h; sourceTree = "<group>"; };
+		AE380C751E778ACB008F4036 /* PBMainInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBMainInteractor.m; sourceTree = "<group>"; };
+		AE380C771E778B00008F4036 /* PBMainPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBMainPresenter.h; sourceTree = "<group>"; };
+		AE380C781E778B00008F4036 /* PBMainPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBMainPresenter.m; sourceTree = "<group>"; };
+		AE380C7B1E778B43008F4036 /* PBInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBInteractor.h; sourceTree = "<group>"; };
+		AE380C7C1E778B43008F4036 /* PBInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBInteractor.m; sourceTree = "<group>"; };
+		AE380C7E1E778B54008F4036 /* PBPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBPresenter.h; sourceTree = "<group>"; };
+		AE380C7F1E778B54008F4036 /* PBPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBPresenter.m; sourceTree = "<group>"; };
+		AE380C811E778B65008F4036 /* PBController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBController.h; sourceTree = "<group>"; };
+		AE380C821E778B65008F4036 /* PBController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBController.m; sourceTree = "<group>"; };
+		AE380C871E77949D008F4036 /* PBMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBMainView.h; sourceTree = "<group>"; };
+		AE380C881E77949D008F4036 /* PBMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBMainView.m; sourceTree = "<group>"; };
+		AE380C8A1E77A833008F4036 /* PBMainInteractorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBMainInteractorProtocol.h; sourceTree = "<group>"; };
+		AE380C8B1E77A845008F4036 /* PBMainPresenterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PBMainPresenterProtocol.h; sourceTree = "<group>"; };
+		AE380C8C1E77A853008F4036 /* PBMainViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PBMainViewProtocol.h; sourceTree = "<group>"; };
+		AE380C8D1E77A8CE008F4036 /* PBMainControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PBMainControllerProtocol.h; sourceTree = "<group>"; };
+		AE380C8F1E77B9A4008F4036 /* PBSecondController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBSecondController.h; sourceTree = "<group>"; };
+		AE380C901E77B9A4008F4036 /* PBSecondController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBSecondController.m; sourceTree = "<group>"; };
+		AE380C911E77B9A4008F4036 /* PBSecondInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBSecondInteractor.h; sourceTree = "<group>"; };
+		AE380C921E77B9A4008F4036 /* PBSecondInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBSecondInteractor.m; sourceTree = "<group>"; };
+		AE380C931E77B9A4008F4036 /* PBSecondPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBSecondPresenter.h; sourceTree = "<group>"; };
+		AE380C941E77B9A4008F4036 /* PBSecondPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBSecondPresenter.m; sourceTree = "<group>"; };
+		AE380C961E77B9A4008F4036 /* PBSecondControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBSecondControllerProtocol.h; sourceTree = "<group>"; };
+		AE380C971E77B9A4008F4036 /* PBSecondInteractorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBSecondInteractorProtocol.h; sourceTree = "<group>"; };
+		AE380C981E77B9A4008F4036 /* PBSecondPresenterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBSecondPresenterProtocol.h; sourceTree = "<group>"; };
+		AE380C991E77B9A4008F4036 /* PBSecondViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBSecondViewProtocol.h; sourceTree = "<group>"; };
+		AE380C9B1E77B9A4008F4036 /* PBSecondView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBSecondView.h; sourceTree = "<group>"; };
+		AE380C9C1E77B9A4008F4036 /* PBSecondView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBSecondView.m; sourceTree = "<group>"; };
+		AE380CD41E77BFB8008F4036 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		AE380CD91E77C356008F4036 /* PBCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBCView.h; sourceTree = "<group>"; };
+		AE380CDA1E77C356008F4036 /* PBCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBCView.m; sourceTree = "<group>"; };
+		AE380CDC1E77D51C008F4036 /* PBTestSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBTestSubView.h; sourceTree = "<group>"; };
+		AE380CDD1E77D51C008F4036 /* PBTestSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBTestSubView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE380C401E76A240008F4036 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE380CD51E77BFB8008F4036 /* AssetsLibrary.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AE380C3A1E76A240008F4036 = {
+			isa = PBXGroup;
+			children = (
+				AE380C451E76A240008F4036 /* PaoBa */,
+				AE380C441E76A240008F4036 /* Products */,
+				AE380CD31E77BFB7008F4036 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AE380C441E76A240008F4036 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE380C431E76A240008F4036 /* PaoBa.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE380C451E76A240008F4036 /* PaoBa */ = {
+			isa = PBXGroup;
+			children = (
+				AE380C491E76A240008F4036 /* AppDelegate.h */,
+				AE380C4A1E76A240008F4036 /* AppDelegate.m */,
+				AE380C7A1E778B30008F4036 /* BaseLogic */,
+				AE380C6F1E778A23008F4036 /* Application */,
+				AE380C5D1E76A300008F4036 /* ServiceLayer */,
+				AE380C6B1E7787B9008F4036 /* NSObject+BaseController */,
+				AE380C521E76A240008F4036 /* Assets.xcassets */,
+				AE380C541E76A240008F4036 /* LaunchScreen.storyboard */,
+				AE380C6A1E76B46A008F4036 /* PaoBa-Prefix.pch */,
+				AE380C571E76A240008F4036 /* Info.plist */,
+				AE380C461E76A240008F4036 /* Supporting Files */,
+			);
+			path = PaoBa;
+			sourceTree = "<group>";
+		};
+		AE380C461E76A240008F4036 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AE380C471E76A240008F4036 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AE380C5D1E76A300008F4036 /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				AE380C5E1E76A300008F4036 /* ServiceFactory.h */,
+				AE380C5F1E76A300008F4036 /* ServiceFactory.m */,
+				AE380C601E76A300008F4036 /* ServiceProtocols */,
+				AE380C631E76A300008F4036 /* SystemPermissionServiceImpl.h */,
+				AE380C641E76A300008F4036 /* SystemPermissionServiceImpl.m */,
+				AE380C651E76A300008F4036 /* UserLogicServiceImpl.h */,
+				AE380C661E76A300008F4036 /* UserLogicServiceImpl.m */,
+			);
+			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
+		AE380C601E76A300008F4036 /* ServiceProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				AE380C611E76A300008F4036 /* SystemPermissionServiceProtocol.h */,
+				AE380C621E76A300008F4036 /* UserLogicServiceProtocol.h */,
+			);
+			path = ServiceProtocols;
+			sourceTree = "<group>";
+		};
+		AE380C6B1E7787B9008F4036 /* NSObject+BaseController */ = {
+			isa = PBXGroup;
+			children = (
+				AE380C6C1E7787B9008F4036 /* NSObject+BaseController.h */,
+				AE380C6D1E7787B9008F4036 /* NSObject+BaseController.m */,
+			);
+			path = "NSObject+BaseController";
+			sourceTree = "<group>";
+		};
+		AE380C6F1E778A23008F4036 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				AE380C8E1E77B9A4008F4036 /* Second */,
+				AE380C701E778A23008F4036 /* Main */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		AE380C701E778A23008F4036 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AE380C711E778A38008F4036 /* PBMainController.h */,
+				AE380C721E778A38008F4036 /* PBMainController.m */,
+				AE380C741E778ACB008F4036 /* PBMainInteractor.h */,
+				AE380C751E778ACB008F4036 /* PBMainInteractor.m */,
+				AE380C771E778B00008F4036 /* PBMainPresenter.h */,
+				AE380C781E778B00008F4036 /* PBMainPresenter.m */,
+				AE380C851E778E41008F4036 /* Protocol */,
+				AE380C841E778C92008F4036 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		AE380C7A1E778B30008F4036 /* BaseLogic */ = {
+			isa = PBXGroup;
+			children = (
+				AE380C7B1E778B43008F4036 /* PBInteractor.h */,
+				AE380C7C1E778B43008F4036 /* PBInteractor.m */,
+				AE380C7E1E778B54008F4036 /* PBPresenter.h */,
+				AE380C7F1E778B54008F4036 /* PBPresenter.m */,
+				AE380C811E778B65008F4036 /* PBController.h */,
+				AE380C821E778B65008F4036 /* PBController.m */,
+				AE380CD91E77C356008F4036 /* PBCView.h */,
+				AE380CDA1E77C356008F4036 /* PBCView.m */,
+			);
+			path = BaseLogic;
+			sourceTree = "<group>";
+		};
+		AE380C841E778C92008F4036 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AE380C871E77949D008F4036 /* PBMainView.h */,
+				AE380C881E77949D008F4036 /* PBMainView.m */,
+				AE380CDC1E77D51C008F4036 /* PBTestSubView.h */,
+				AE380CDD1E77D51C008F4036 /* PBTestSubView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AE380C851E778E41008F4036 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				AE380C8D1E77A8CE008F4036 /* PBMainControllerProtocol.h */,
+				AE380C8A1E77A833008F4036 /* PBMainInteractorProtocol.h */,
+				AE380C8B1E77A845008F4036 /* PBMainPresenterProtocol.h */,
+				AE380C8C1E77A853008F4036 /* PBMainViewProtocol.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		AE380C8E1E77B9A4008F4036 /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				AE380C8F1E77B9A4008F4036 /* PBSecondController.h */,
+				AE380C901E77B9A4008F4036 /* PBSecondController.m */,
+				AE380C911E77B9A4008F4036 /* PBSecondInteractor.h */,
+				AE380C921E77B9A4008F4036 /* PBSecondInteractor.m */,
+				AE380C931E77B9A4008F4036 /* PBSecondPresenter.h */,
+				AE380C941E77B9A4008F4036 /* PBSecondPresenter.m */,
+				AE380C951E77B9A4008F4036 /* Protocol */,
+				AE380C9A1E77B9A4008F4036 /* View */,
+			);
+			path = Second;
+			sourceTree = "<group>";
+		};
+		AE380C951E77B9A4008F4036 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				AE380C961E77B9A4008F4036 /* PBSecondControllerProtocol.h */,
+				AE380C971E77B9A4008F4036 /* PBSecondInteractorProtocol.h */,
+				AE380C981E77B9A4008F4036 /* PBSecondPresenterProtocol.h */,
+				AE380C991E77B9A4008F4036 /* PBSecondViewProtocol.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		AE380C9A1E77B9A4008F4036 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AE380C9B1E77B9A4008F4036 /* PBSecondView.h */,
+				AE380C9C1E77B9A4008F4036 /* PBSecondView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AE380CD31E77BFB7008F4036 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE380CD41E77BFB8008F4036 /* AssetsLibrary.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE380C421E76A240008F4036 /* PaoBa */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE380C5A1E76A240008F4036 /* Build configuration list for PBXNativeTarget "PaoBa" */;
+			buildPhases = (
+				AE380C3F1E76A240008F4036 /* Sources */,
+				AE380C401E76A240008F4036 /* Frameworks */,
+				AE380C411E76A240008F4036 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PaoBa;
+			productName = PaoBa;
+			productReference = AE380C431E76A240008F4036 /* PaoBa.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE380C3B1E76A240008F4036 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = wujian;
+				TargetAttributes = {
+					AE380C421E76A240008F4036 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = B776HGZTR8;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = AE380C3E1E76A240008F4036 /* Build configuration list for PBXProject "PaoBa" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AE380C3A1E76A240008F4036;
+			productRefGroup = AE380C441E76A240008F4036 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE380C421E76A240008F4036 /* PaoBa */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE380C411E76A240008F4036 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE380C561E76A240008F4036 /* LaunchScreen.storyboard in Resources */,
+				AE380C531E76A240008F4036 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE380C3F1E76A240008F4036 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE380C731E778A38008F4036 /* PBMainController.m in Sources */,
+				AE380C891E77949D008F4036 /* PBMainView.m in Sources */,
+				AE380C671E76A300008F4036 /* ServiceFactory.m in Sources */,
+				AE380C7D1E778B43008F4036 /* PBInteractor.m in Sources */,
+				AE380C6E1E7787B9008F4036 /* NSObject+BaseController.m in Sources */,
+				AE380C761E778ACB008F4036 /* PBMainInteractor.m in Sources */,
+				AE380C791E778B00008F4036 /* PBMainPresenter.m in Sources */,
+				AE380C9E1E77B9A4008F4036 /* PBSecondInteractor.m in Sources */,
+				AE380C9D1E77B9A4008F4036 /* PBSecondController.m in Sources */,
+				AE380C4B1E76A240008F4036 /* AppDelegate.m in Sources */,
+				AE380CDE1E77D51C008F4036 /* PBTestSubView.m in Sources */,
+				AE380CDB1E77C356008F4036 /* PBCView.m in Sources */,
+				AE380C831E778B65008F4036 /* PBController.m in Sources */,
+				AE380CA01E77B9A4008F4036 /* PBSecondView.m in Sources */,
+				AE380C691E76A300008F4036 /* UserLogicServiceImpl.m in Sources */,
+				AE380C681E76A300008F4036 /* SystemPermissionServiceImpl.m in Sources */,
+				AE380C801E778B54008F4036 /* PBPresenter.m in Sources */,
+				AE380C481E76A240008F4036 /* main.m in Sources */,
+				AE380C9F1E77B9A4008F4036 /* PBSecondPresenter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AE380C541E76A240008F4036 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE380C551E76A240008F4036 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AE380C581E76A240008F4036 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AE380C591E76A240008F4036 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE380C5B1E76A240008F4036 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B776HGZTR8;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PREFIX_HEADER = "PaoBa/PaoBa-Prefix.pch";
+				IBSC_FLATTEN_NIBS = YES;
+				INFOPLIST_FILE = PaoBa/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wesk.PaoBa;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		AE380C5C1E76A240008F4036 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B776HGZTR8;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PREFIX_HEADER = "PaoBa/PaoBa-Prefix.pch";
+				IBSC_FLATTEN_NIBS = YES;
+				INFOPLIST_FILE = PaoBa/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wesk.PaoBa;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE380C3E1E76A240008F4036 /* Build configuration list for PBXProject "PaoBa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE380C581E76A240008F4036 /* Debug */,
+				AE380C591E76A240008F4036 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE380C5A1E76A240008F4036 /* Build configuration list for PBXNativeTarget "PaoBa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE380C5B1E76A240008F4036 /* Debug */,
+				AE380C5C1E76A240008F4036 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AE380C3B1E76A240008F4036 /* Project object */;
+}
