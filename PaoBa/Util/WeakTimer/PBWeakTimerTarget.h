@@ -1,5 +1,5 @@
 //
-//  BBWeakTimerTarget.h
+//  PBWeakTimerTarget.h
 //  PaoBa
 //
 //  Created by wujian on 4/18/16.
@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^BBTimerHandler)(id userInfo);
+typedef void (^PBTimerHandler)(id userInfo);
 
-@interface BBWeakTimerTarget : NSObject
+@interface PBWeakTimerTarget : NSObject
 
 + (NSTimer *) scheduledTimerWithTimeInterval:(NSTimeInterval)interval
                                       target:(id)aTarget
@@ -19,7 +19,7 @@ typedef void (^BBTimerHandler)(id userInfo);
                                      repeats:(BOOL)repeats;
 
 + (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)interval
-                                      block:(BBTimerHandler)block
+                                      block:(PBTimerHandler)block
                                    userInfo:(id)userInfo
                                     repeats:(BOOL)repeats;
 

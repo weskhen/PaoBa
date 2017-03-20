@@ -11,7 +11,9 @@
 
 @protocol UserLogicServiceProtocol <NSObject>
 
-- (void)getUserProfileFromServerWithUserId:(NSNumber *)userId;
+- (void)getUserProfileFromServerWithUserId:(NSNumber *)userId andDelegate:(id)delegate;
 
+
+- (void)modifyUserWithName:(NSString *)name andDelegate:(id)delegate;
 @end
 #endif /* UserLogicServiceProtocol_h */

@@ -1,12 +1,12 @@
 //
-//  BBWeakTimerTarget.m
+//  PBWeakTimerTarget.m
 //  PaoBa
 //
 //  Created by wujian on 4/18/16.
 //  Copyright © 2016 wesk痕. All rights reserved.
 //
 
-#import "BBWeakTimerTarget.h"
+#import "PBWeakTimerTarget.h"
 
 //suppress warnning
 #define SuppressPerformSelectorLeakWarning(Stuff) \
@@ -17,14 +17,14 @@ Stuff; \
 _Pragma("clang diagnostic pop") \
 } while (0)
 
-@interface BBWeakTimerTarget ()
+@interface PBWeakTimerTarget ()
 
 @property (nonatomic, weak)     id target;
 @property (nonatomic, assign)   SEL selector;
 @property (nonatomic, weak)     NSTimer* timer;
 
 @end
-@implementation BBWeakTimerTarget
+@implementation PBWeakTimerTarget
 
 - (void)timerDidFire:(NSTimer *)timer {
     if(self.target) {
@@ -41,7 +41,7 @@ _Pragma("clang diagnostic pop") \
                                     selector:(SEL)aSelector
                                     userInfo:(id)userInfo
                                      repeats:(BOOL)repeats {
-    BBWeakTimerTarget* timerTarget = [[BBWeakTimerTarget alloc] init];
+    PBWeakTimerTarget* timerTarget = [[PBWeakTimerTarget alloc] init];
     timerTarget.target = aTarget;
     timerTarget.selector = aSelector;
     timerTarget.timer = [NSTimer scheduledTimerWithTimeInterval:interval
@@ -51,12 +51,12 @@ _Pragma("clang diagnostic pop") \
                                                         repeats:repeats];
     
     //为了避免scroll滚动时 计时器不起作用
-    [[NSRunLoop currentRunLoop] addTimer:timerTarget.timer forMode:UITrackingRunLoopMode];
+//    [[NSRunLoop currentRunLoop] addTimer:timerTarget.timer forMode:UITrackingRunLoopMode];
     return timerTarget.timer;
 }
 
 + (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)interval
-                                      block:(BBTimerHandler)block
+                                      block:(PBTimerHandler)block
                                    userInfo:(id)userInfo
                                     repeats:(BOOL)repeats {
     return [self scheduledTimerWithTimeInterval:interval
@@ -67,7 +67,7 @@ _Pragma("clang diagnostic pop") \
 }
 
 + (void)timerBlockInvoke:(NSArray*)userInfo {
-    BBTimerHandler block = userInfo[0];
+    PBTimerHandler block = userInfo[0];
     id info = userInfo[1];
     if (block) {
         block(info);
