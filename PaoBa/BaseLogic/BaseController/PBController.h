@@ -9,12 +9,18 @@
 #import <UIKit/UIKit.h>
 #import "PBPresenter.h"
 #import "PBInteractor.h"
-#import "PBCView.h"
+#import "PBView.h"
 
 @interface PBController : UIViewController
 
-@property (nonatomic, weak, readonly) PBPresenter *presenter;
-@property (nonatomic, weak, readonly) PBInteractor *interactor;
-@property (nonatomic, weak, readonly) PBCView *cView;
+@property (nonatomic, strong, readonly) PBPresenter *presenter;
+@property (nonatomic, strong, readonly) PBInteractor *interactor;
+@property (nonatomic, strong, readonly) PBView *cView;
+
+
+//基于VIP模式
+- (void)configVIPWithVCPrefix:(NSString *)name;
+
+- (void)updateNavTitle:(NSString *)title;
 
 @end

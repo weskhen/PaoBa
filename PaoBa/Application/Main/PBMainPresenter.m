@@ -25,7 +25,10 @@
 #pragma mark - PrivateMethod
 - (void)detectJump
 {
-    PBSend(self.baseController.interactor, PBMainInteractorProtocol, gotoSecondController);
+    [(id<PBMainInteractorProtocol>)self.baseController.interactor gotoSecondController];
+    
+    
+//    PBSend(self.baseController.interactor, PBMainInteractorProtocol, gotoSecondController);
 }
 
 @end

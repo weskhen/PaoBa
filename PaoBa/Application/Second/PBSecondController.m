@@ -14,30 +14,17 @@
 
 @interface PBSecondController ()<PBSecondControllerProtocol>
 
-@property (nonatomic, strong) PBSecondPresenter *currentPresenter;
-@property (nonatomic, strong) PBSecondInteractor *currentInteractor;
-@property (nonatomic, strong) PBSecondView    *currentView;
+
 
 @end
 
 @implementation PBSecondController
-@synthesize presenter = _presenter;
-@synthesize interactor = _interactor;
-@synthesize cView = _cView;
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        if (_presenter == nil) {
-            _presenter = self.currentPresenter;
-        }
-        if (_interactor == nil) {
-            _interactor = self.currentInteractor;
-        }
-        if (_currentView == nil) {
-            _cView = self.currentView;
-        }
+        [self configVIPWithVCPrefix:@"Second"];
     }
     return self;
 }
@@ -60,32 +47,5 @@
 
 #pragma mark - PBSecondControllerProtocol
 
-
-#pragma mark - setter/getter
-- (PBSecondPresenter *)currentPresenter
-{
-    if (_currentPresenter == nil) {
-        _currentPresenter = [PBSecondPresenter new];
-        _currentPresenter.baseController = self;
-    }
-    return _currentPresenter;
-}
-
-- (PBSecondInteractor *)currentInteractor
-{
-    if (_currentInteractor == nil) {
-        _currentInteractor = [PBSecondInteractor new];
-        _currentInteractor.baseController = self;
-    }
-    return _currentInteractor;
-}
-- (PBSecondView *)currentView
-{
-    if (_currentView == nil) {
-        _currentView = [PBSecondView new];
-        _currentView.baseController = self;
-    }
-    return _currentView;
-}
 
 @end

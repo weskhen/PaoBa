@@ -1,14 +1,14 @@
 //
-//  PBCView.m
+//  PBView.m
 //  PaoBa
 //
 //  Created by wujian on 2017/3/14.
 //  Copyright © 2017年 wujian. All rights reserved.
 //
 
-#import "PBCView.h"
+#import "PBView.h"
 
-@implementation PBCView
+@implementation PBView
 
 /*
 // Only override drawRect: if you perform custom drawing.

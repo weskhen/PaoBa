@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PBCView.h"
+#import "PBView.h"
 
-@interface PBSecondView : PBCView
+@interface PBSecondView : PBView
 
 @end

@@ -7,6 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		372EA21B4910CBD9FCBCA383 /* libPods-PaoBa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF82584DDCF2215C7289D35 /* libPods-PaoBa.a */; };
+		5A109E751F38369B0040FDCE /* ChatGiftMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A109E441F38369B0040FDCE /* ChatGiftMessage.m */; };
+		5A109E761F38369B0040FDCE /* ChatMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A109E461F38369B0040FDCE /* ChatMessage.m */; };
+		5A109E771F38369B0040FDCE /* ChatTextMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A109E481F38369B0040FDCE /* ChatTextMessage.m */; };
+		5A109E781F38369B0040FDCE /* ChatTipMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A109E4A1F38369B0040FDCE /* ChatTipMessage.m */; };
+		5A109E791F38369B0040FDCE /* PBTalkAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A109E521F38369B0040FDCE /* PBTalkAdapter.m */; };
+		5A109E7A1F38369B0040FDCE /* PBTalkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A109E541F38369B0040FDCE /* PBTalkController.m */; };
+		5A109E7B1F38369B0040FDCE /* PBTalkInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A109E561F38369B0040FDCE /* PBTalkInteractor.m */; };
+		5A109E7C1F38369B0040FDCE /* PBTalkPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A109E581F38369B0040FDCE /* PBTalkPresenter.m */; };
+		5A109E7D1F38369B0040FDCE /* ChatGiftMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A109E5C1F38369B0040FDCE /* ChatGiftMessageCell.m */; };
+		5A109E7E1F38369B0040FDCE /* ChatMessageBaseUICell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A109E5E1F38369B0040FDCE /* ChatMessageBaseUICell.m */; };
+		5A109E7F1F38369B0040FDCE /* ChatMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A109E601F38369B0040FDCE /* ChatMessageCell.m */; };
+		5A109E801F38369B0040FDCE /* ChatTextMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A109E621F38369B0040FDCE /* ChatTextMessageCell.m */; };
+		5A109E811F38369B0040FDCE /* ChatTipMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A109E641F38369B0040FDCE /* ChatTipMessageCell.m */; };
+		5A109E821F38369B0040FDCE /* ChatUnknowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A109E661F38369B0040FDCE /* ChatUnknowCell.m */; };
+		5A109E831F38369B0040FDCE /* PBMessageCellHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A109E681F38369B0040FDCE /* PBMessageCellHelper.m */; };
+		5A109E841F38369B0040FDCE /* PBChatLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A109E6A1F38369B0040FDCE /* PBChatLabel.m */; };
+		5A109E861F38369B0040FDCE /* PBTalkInputBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A109E6E1F38369B0040FDCE /* PBTalkInputBar.m */; };
+		5A109E871F38369B0040FDCE /* PBTalkTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A109E701F38369B0040FDCE /* PBTalkTableHeaderView.m */; };
+		5A109E881F38369B0040FDCE /* PBTalkTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A109E721F38369B0040FDCE /* PBTalkTextView.m */; };
+		5A109E891F38369B0040FDCE /* PBTalkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A109E741F38369B0040FDCE /* PBTalkView.m */; };
+		5A109E911F38378A0040FDCE /* UIColor+PB.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A109E901F38378A0040FDCE /* UIColor+PB.m */; };
+		5A109E941F3837980040FDCE /* UIFont+PB.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A109E931F3837980040FDCE /* UIFont+PB.m */; };
+		5A109E971F38387F0040FDCE /* NSAttributedString+PB.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A109E961F38387F0040FDCE /* NSAttributedString+PB.m */; };
+		5AE34FE81F46790D00C8D795 /* UIImage+PB.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE34FE71F46790D00C8D795 /* UIImage+PB.m */; };
+		5AE34FEB1F46812D00C8D795 /* ChatLoadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE34FEA1F46812C00C8D795 /* ChatLoadCell.m */; };
+		5AE34FEE1F46814200C8D795 /* ChatLoadingMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE34FED1F46814200C8D795 /* ChatLoadingMessage.m */; };
+		5AE34FF21F4685E700C8D795 /* PBDetailUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE34FF11F4685E700C8D795 /* PBDetailUser.m */; };
+		5AE34FF51F468CDA00C8D795 /* PBTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE34FF41F468CDA00C8D795 /* PBTableView.m */; };
+		5AE34FF81F468DC400C8D795 /* PBAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE34FF71F468DC400C8D795 /* PBAdapter.m */; };
+		5AE34FFB1F4690C600C8D795 /* PBBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE34FFA1F4690C600C8D795 /* PBBottomView.m */; };
+		5AE34FFE1F46B82F00C8D795 /* PBOwnUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE34FFD1F46B82F00C8D795 /* PBOwnUser.m */; };
+		5AE350011F46C5CC00C8D795 /* PBUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE350001F46C5CC00C8D795 /* PBUserDefaults.m */; };
+		5AE350051F47193200C8D795 /* PBTimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE350041F47193100C8D795 /* PBTimeTool.m */; };
 		AE380C481E76A240008F4036 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380C471E76A240008F4036 /* main.m */; };
 		AE380C4B1E76A240008F4036 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380C4A1E76A240008F4036 /* AppDelegate.m */; };
 		AE380C531E76A240008F4036 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE380C521E76A240008F4036 /* Assets.xcassets */; };
@@ -26,7 +60,7 @@
 		AE380CE81E795CA2008F4036 /* SystemPermissionServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380CE41E795CA2008F4036 /* SystemPermissionServiceImpl.m */; };
 		AE380CE91E795CA2008F4036 /* UserLogicServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380CE71E795CA2008F4036 /* UserLogicServiceImpl.m */; };
 		AE380CF41E795D55008F4036 /* PBController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380CED1E795D55008F4036 /* PBController.m */; };
-		AE380CF51E795D55008F4036 /* PBCView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380CEF1E795D55008F4036 /* PBCView.m */; };
+		AE380CF51E795D55008F4036 /* PBView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380CEF1E795D55008F4036 /* PBView.m */; };
 		AE380CF61E795D55008F4036 /* PBInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380CF11E795D55008F4036 /* PBInteractor.m */; };
 		AE380CF71E795D55008F4036 /* PBPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380CF31E795D55008F4036 /* PBPresenter.m */; };
 		AE380CFB1E795DB1008F4036 /* PBRequestCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380CFA1E795DB1008F4036 /* PBRequestCommon.m */; };
@@ -40,6 +74,78 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1CF82584DDCF2215C7289D35 /* libPods-PaoBa.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PaoBa.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A109E431F38369B0040FDCE /* ChatGiftMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatGiftMessage.h; sourceTree = "<group>"; };
+		5A109E441F38369B0040FDCE /* ChatGiftMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatGiftMessage.m; sourceTree = "<group>"; };
+		5A109E451F38369B0040FDCE /* ChatMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatMessage.h; sourceTree = "<group>"; };
+		5A109E461F38369B0040FDCE /* ChatMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatMessage.m; sourceTree = "<group>"; };
+		5A109E471F38369B0040FDCE /* ChatTextMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTextMessage.h; sourceTree = "<group>"; };
+		5A109E481F38369B0040FDCE /* ChatTextMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTextMessage.m; sourceTree = "<group>"; };
+		5A109E491F38369B0040FDCE /* ChatTipMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTipMessage.h; sourceTree = "<group>"; };
+		5A109E4A1F38369B0040FDCE /* ChatTipMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTipMessage.m; sourceTree = "<group>"; };
+		5A109E4D1F38369B0040FDCE /* PBTalkControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBTalkControllerProtocol.h; sourceTree = "<group>"; };
+		5A109E4E1F38369B0040FDCE /* PBTalkInteractorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBTalkInteractorProtocol.h; sourceTree = "<group>"; };
+		5A109E4F1F38369B0040FDCE /* PBTalkPresenterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBTalkPresenterProtocol.h; sourceTree = "<group>"; };
+		5A109E501F38369B0040FDCE /* PBTalkViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBTalkViewProtocol.h; sourceTree = "<group>"; };
+		5A109E511F38369B0040FDCE /* PBTalkAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBTalkAdapter.h; sourceTree = "<group>"; };
+		5A109E521F38369B0040FDCE /* PBTalkAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBTalkAdapter.m; sourceTree = "<group>"; };
+		5A109E531F38369B0040FDCE /* PBTalkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBTalkController.h; sourceTree = "<group>"; };
+		5A109E541F38369B0040FDCE /* PBTalkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBTalkController.m; sourceTree = "<group>"; };
+		5A109E551F38369B0040FDCE /* PBTalkInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBTalkInteractor.h; sourceTree = "<group>"; };
+		5A109E561F38369B0040FDCE /* PBTalkInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBTalkInteractor.m; sourceTree = "<group>"; };
+		5A109E571F38369B0040FDCE /* PBTalkPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBTalkPresenter.h; sourceTree = "<group>"; };
+		5A109E581F38369B0040FDCE /* PBTalkPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBTalkPresenter.m; sourceTree = "<group>"; };
+		5A109E5B1F38369B0040FDCE /* ChatGiftMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatGiftMessageCell.h; sourceTree = "<group>"; };
+		5A109E5C1F38369B0040FDCE /* ChatGiftMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatGiftMessageCell.m; sourceTree = "<group>"; };
+		5A109E5D1F38369B0040FDCE /* ChatMessageBaseUICell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatMessageBaseUICell.h; sourceTree = "<group>"; };
+		5A109E5E1F38369B0040FDCE /* ChatMessageBaseUICell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatMessageBaseUICell.m; sourceTree = "<group>"; };
+		5A109E5F1F38369B0040FDCE /* ChatMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatMessageCell.h; sourceTree = "<group>"; };
+		5A109E601F38369B0040FDCE /* ChatMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatMessageCell.m; sourceTree = "<group>"; };
+		5A109E611F38369B0040FDCE /* ChatTextMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTextMessageCell.h; sourceTree = "<group>"; };
+		5A109E621F38369B0040FDCE /* ChatTextMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTextMessageCell.m; sourceTree = "<group>"; };
+		5A109E631F38369B0040FDCE /* ChatTipMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTipMessageCell.h; sourceTree = "<group>"; };
+		5A109E641F38369B0040FDCE /* ChatTipMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTipMessageCell.m; sourceTree = "<group>"; };
+		5A109E651F38369B0040FDCE /* ChatUnknowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatUnknowCell.h; sourceTree = "<group>"; };
+		5A109E661F38369B0040FDCE /* ChatUnknowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatUnknowCell.m; sourceTree = "<group>"; };
+		5A109E671F38369B0040FDCE /* PBMessageCellHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBMessageCellHelper.h; sourceTree = "<group>"; };
+		5A109E681F38369B0040FDCE /* PBMessageCellHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBMessageCellHelper.m; sourceTree = "<group>"; };
+		5A109E691F38369B0040FDCE /* PBChatLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PBChatLabel.h; path = ../PBChatLabel.h; sourceTree = "<group>"; };
+		5A109E6A1F38369B0040FDCE /* PBChatLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PBChatLabel.m; path = ../PBChatLabel.m; sourceTree = "<group>"; };
+		5A109E6D1F38369B0040FDCE /* PBTalkInputBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBTalkInputBar.h; sourceTree = "<group>"; };
+		5A109E6E1F38369B0040FDCE /* PBTalkInputBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBTalkInputBar.m; sourceTree = "<group>"; };
+		5A109E6F1F38369B0040FDCE /* PBTalkTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBTalkTableHeaderView.h; sourceTree = "<group>"; };
+		5A109E701F38369B0040FDCE /* PBTalkTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBTalkTableHeaderView.m; sourceTree = "<group>"; };
+		5A109E711F38369B0040FDCE /* PBTalkTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBTalkTextView.h; sourceTree = "<group>"; };
+		5A109E721F38369B0040FDCE /* PBTalkTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBTalkTextView.m; sourceTree = "<group>"; };
+		5A109E731F38369B0040FDCE /* PBTalkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBTalkView.h; sourceTree = "<group>"; };
+		5A109E741F38369B0040FDCE /* PBTalkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBTalkView.m; sourceTree = "<group>"; };
+		5A109E8F1F38378A0040FDCE /* UIColor+PB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+PB.h"; sourceTree = "<group>"; };
+		5A109E901F38378A0040FDCE /* UIColor+PB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+PB.m"; sourceTree = "<group>"; };
+		5A109E921F3837980040FDCE /* UIFont+PB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+PB.h"; sourceTree = "<group>"; };
+		5A109E931F3837980040FDCE /* UIFont+PB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+PB.m"; sourceTree = "<group>"; };
+		5A109E951F38387F0040FDCE /* NSAttributedString+PB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+PB.h"; sourceTree = "<group>"; };
+		5A109E961F38387F0040FDCE /* NSAttributedString+PB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+PB.m"; sourceTree = "<group>"; };
+		5AE34FE61F46790D00C8D795 /* UIImage+PB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+PB.h"; sourceTree = "<group>"; };
+		5AE34FE71F46790D00C8D795 /* UIImage+PB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PB.m"; sourceTree = "<group>"; };
+		5AE34FE91F46812C00C8D795 /* ChatLoadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatLoadCell.h; sourceTree = "<group>"; };
+		5AE34FEA1F46812C00C8D795 /* ChatLoadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatLoadCell.m; sourceTree = "<group>"; };
+		5AE34FEC1F46814200C8D795 /* ChatLoadingMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatLoadingMessage.h; sourceTree = "<group>"; };
+		5AE34FED1F46814200C8D795 /* ChatLoadingMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatLoadingMessage.m; sourceTree = "<group>"; };
+		5AE34FF01F4685E700C8D795 /* PBDetailUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBDetailUser.h; sourceTree = "<group>"; };
+		5AE34FF11F4685E700C8D795 /* PBDetailUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBDetailUser.m; sourceTree = "<group>"; };
+		5AE34FF31F468CDA00C8D795 /* PBTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBTableView.h; sourceTree = "<group>"; };
+		5AE34FF41F468CDA00C8D795 /* PBTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBTableView.m; sourceTree = "<group>"; };
+		5AE34FF61F468DC400C8D795 /* PBAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBAdapter.h; sourceTree = "<group>"; };
+		5AE34FF71F468DC400C8D795 /* PBAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBAdapter.m; sourceTree = "<group>"; };
+		5AE34FF91F4690C600C8D795 /* PBBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBBottomView.h; sourceTree = "<group>"; };
+		5AE34FFA1F4690C600C8D795 /* PBBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBBottomView.m; sourceTree = "<group>"; };
+		5AE34FFC1F46B82F00C8D795 /* PBOwnUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBOwnUser.h; sourceTree = "<group>"; };
+		5AE34FFD1F46B82F00C8D795 /* PBOwnUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBOwnUser.m; sourceTree = "<group>"; };
+		5AE34FFF1F46C5CC00C8D795 /* PBUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBUserDefaults.h; sourceTree = "<group>"; };
+		5AE350001F46C5CC00C8D795 /* PBUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBUserDefaults.m; sourceTree = "<group>"; };
+		5AE350031F47193100C8D795 /* PBTimeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBTimeTool.h; sourceTree = "<group>"; };
+		5AE350041F47193100C8D795 /* PBTimeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBTimeTool.m; sourceTree = "<group>"; };
+		98A07A8DE2797A764EAEC6D6 /* Pods-PaoBa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaoBa.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaoBa/Pods-PaoBa.release.xcconfig"; sourceTree = "<group>"; };
 		AE380C431E76A240008F4036 /* PaoBa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaoBa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE380C471E76A240008F4036 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AE380C491E76A240008F4036 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -87,8 +193,8 @@
 		AE380CE71E795CA2008F4036 /* UserLogicServiceImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLogicServiceImpl.m; sourceTree = "<group>"; };
 		AE380CEC1E795D55008F4036 /* PBController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBController.h; sourceTree = "<group>"; };
 		AE380CED1E795D55008F4036 /* PBController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBController.m; sourceTree = "<group>"; };
-		AE380CEE1E795D55008F4036 /* PBCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBCView.h; sourceTree = "<group>"; };
-		AE380CEF1E795D55008F4036 /* PBCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBCView.m; sourceTree = "<group>"; };
+		AE380CEE1E795D55008F4036 /* PBView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBView.h; sourceTree = "<group>"; };
+		AE380CEF1E795D55008F4036 /* PBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBView.m; sourceTree = "<group>"; };
 		AE380CF01E795D55008F4036 /* PBInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBInteractor.h; sourceTree = "<group>"; };
 		AE380CF11E795D55008F4036 /* PBInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBInteractor.m; sourceTree = "<group>"; };
 		AE380CF21E795D55008F4036 /* PBPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBPresenter.h; sourceTree = "<group>"; };
@@ -110,6 +216,7 @@
 		AE380D131E7A7C5F008F4036 /* PBSocketProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBSocketProtocol.h; sourceTree = "<group>"; };
 		AE380D161E7AB32A008F4036 /* PBRequestCallBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBRequestCallBack.h; sourceTree = "<group>"; };
 		AE380D171E7AB32A008F4036 /* PBRequestCallBack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBRequestCallBack.m; sourceTree = "<group>"; };
+		B52F61447874709313537B44 /* Pods-PaoBa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaoBa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PaoBa/Pods-PaoBa.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,18 +225,174 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE380CD51E77BFB8008F4036 /* AssetsLibrary.framework in Frameworks */,
+				372EA21B4910CBD9FCBCA383 /* libPods-PaoBa.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2812F5D4693D70388AC09147 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B52F61447874709313537B44 /* Pods-PaoBa.debug.xcconfig */,
+				98A07A8DE2797A764EAEC6D6 /* Pods-PaoBa.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5A109E411F38369B0040FDCE /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				5A109E421F38369B0040FDCE /* ChatMessage */,
+				5A109E4B1F38369B0040FDCE /* Talk */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		5A109E421F38369B0040FDCE /* ChatMessage */ = {
+			isa = PBXGroup;
+			children = (
+				5AE34FEC1F46814200C8D795 /* ChatLoadingMessage.h */,
+				5AE34FED1F46814200C8D795 /* ChatLoadingMessage.m */,
+				5A109E431F38369B0040FDCE /* ChatGiftMessage.h */,
+				5A109E441F38369B0040FDCE /* ChatGiftMessage.m */,
+				5A109E451F38369B0040FDCE /* ChatMessage.h */,
+				5A109E461F38369B0040FDCE /* ChatMessage.m */,
+				5A109E471F38369B0040FDCE /* ChatTextMessage.h */,
+				5A109E481F38369B0040FDCE /* ChatTextMessage.m */,
+				5A109E491F38369B0040FDCE /* ChatTipMessage.h */,
+				5A109E4A1F38369B0040FDCE /* ChatTipMessage.m */,
+			);
+			path = ChatMessage;
+			sourceTree = "<group>";
+		};
+		5A109E4B1F38369B0040FDCE /* Talk */ = {
+			isa = PBXGroup;
+			children = (
+				5A109E4C1F38369B0040FDCE /* Protocol */,
+				5A109E511F38369B0040FDCE /* PBTalkAdapter.h */,
+				5A109E521F38369B0040FDCE /* PBTalkAdapter.m */,
+				5A109E531F38369B0040FDCE /* PBTalkController.h */,
+				5A109E541F38369B0040FDCE /* PBTalkController.m */,
+				5A109E551F38369B0040FDCE /* PBTalkInteractor.h */,
+				5A109E561F38369B0040FDCE /* PBTalkInteractor.m */,
+				5A109E571F38369B0040FDCE /* PBTalkPresenter.h */,
+				5A109E581F38369B0040FDCE /* PBTalkPresenter.m */,
+				5A109E591F38369B0040FDCE /* View */,
+			);
+			path = Talk;
+			sourceTree = "<group>";
+		};
+		5A109E4C1F38369B0040FDCE /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				5A109E4D1F38369B0040FDCE /* PBTalkControllerProtocol.h */,
+				5A109E4E1F38369B0040FDCE /* PBTalkInteractorProtocol.h */,
+				5A109E4F1F38369B0040FDCE /* PBTalkPresenterProtocol.h */,
+				5A109E501F38369B0040FDCE /* PBTalkViewProtocol.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		5A109E591F38369B0040FDCE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5A109E731F38369B0040FDCE /* PBTalkView.h */,
+				5A109E741F38369B0040FDCE /* PBTalkView.m */,
+				5A109E6D1F38369B0040FDCE /* PBTalkInputBar.h */,
+				5A109E6E1F38369B0040FDCE /* PBTalkInputBar.m */,
+				5A109E711F38369B0040FDCE /* PBTalkTextView.h */,
+				5A109E721F38369B0040FDCE /* PBTalkTextView.m */,
+				5A109E6F1F38369B0040FDCE /* PBTalkTableHeaderView.h */,
+				5A109E701F38369B0040FDCE /* PBTalkTableHeaderView.m */,
+				5AE34FF91F4690C600C8D795 /* PBBottomView.h */,
+				5AE34FFA1F4690C600C8D795 /* PBBottomView.m */,
+				5A109E5A1F38369B0040FDCE /* ChatMessageCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5A109E5A1F38369B0040FDCE /* ChatMessageCell */ = {
+			isa = PBXGroup;
+			children = (
+				5A109E5B1F38369B0040FDCE /* ChatGiftMessageCell.h */,
+				5A109E5C1F38369B0040FDCE /* ChatGiftMessageCell.m */,
+				5A109E5D1F38369B0040FDCE /* ChatMessageBaseUICell.h */,
+				5A109E5E1F38369B0040FDCE /* ChatMessageBaseUICell.m */,
+				5A109E5F1F38369B0040FDCE /* ChatMessageCell.h */,
+				5A109E601F38369B0040FDCE /* ChatMessageCell.m */,
+				5A109E611F38369B0040FDCE /* ChatTextMessageCell.h */,
+				5A109E621F38369B0040FDCE /* ChatTextMessageCell.m */,
+				5A109E691F38369B0040FDCE /* PBChatLabel.h */,
+				5A109E6A1F38369B0040FDCE /* PBChatLabel.m */,
+				5A109E631F38369B0040FDCE /* ChatTipMessageCell.h */,
+				5A109E641F38369B0040FDCE /* ChatTipMessageCell.m */,
+				5AE34FE91F46812C00C8D795 /* ChatLoadCell.h */,
+				5AE34FEA1F46812C00C8D795 /* ChatLoadCell.m */,
+				5A109E651F38369B0040FDCE /* ChatUnknowCell.h */,
+				5A109E661F38369B0040FDCE /* ChatUnknowCell.m */,
+				5A109E671F38369B0040FDCE /* PBMessageCellHelper.h */,
+				5A109E681F38369B0040FDCE /* PBMessageCellHelper.m */,
+			);
+			path = ChatMessageCell;
+			sourceTree = "<group>";
+		};
+		5A109E8A1F3837640040FDCE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5AE350021F47191F00C8D795 /* ToolUtil */,
+				5A109E8B1F3837640040FDCE /* SystemObject */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		5A109E8B1F3837640040FDCE /* SystemObject */ = {
+			isa = PBXGroup;
+			children = (
+				5A109E8F1F38378A0040FDCE /* UIColor+PB.h */,
+				5A109E901F38378A0040FDCE /* UIColor+PB.m */,
+				5A109E921F3837980040FDCE /* UIFont+PB.h */,
+				5A109E931F3837980040FDCE /* UIFont+PB.m */,
+				5A109E951F38387F0040FDCE /* NSAttributedString+PB.h */,
+				5A109E961F38387F0040FDCE /* NSAttributedString+PB.m */,
+				5AE34FE61F46790D00C8D795 /* UIImage+PB.h */,
+				5AE34FE71F46790D00C8D795 /* UIImage+PB.m */,
+				5AE34FF31F468CDA00C8D795 /* PBTableView.h */,
+				5AE34FF41F468CDA00C8D795 /* PBTableView.m */,
+				5AE34FFF1F46C5CC00C8D795 /* PBUserDefaults.h */,
+				5AE350001F46C5CC00C8D795 /* PBUserDefaults.m */,
+			);
+			path = SystemObject;
+			sourceTree = "<group>";
+		};
+		5AE34FEF1F4685D900C8D795 /* BaseDB */ = {
+			isa = PBXGroup;
+			children = (
+				5AE34FF01F4685E700C8D795 /* PBDetailUser.h */,
+				5AE34FF11F4685E700C8D795 /* PBDetailUser.m */,
+				5AE34FFC1F46B82F00C8D795 /* PBOwnUser.h */,
+				5AE34FFD1F46B82F00C8D795 /* PBOwnUser.m */,
+			);
+			path = BaseDB;
+			sourceTree = "<group>";
+		};
+		5AE350021F47191F00C8D795 /* ToolUtil */ = {
+			isa = PBXGroup;
+			children = (
+				5AE350031F47193100C8D795 /* PBTimeTool.h */,
+				5AE350041F47193100C8D795 /* PBTimeTool.m */,
+			);
+			path = ToolUtil;
+			sourceTree = "<group>";
+		};
 		AE380C3A1E76A240008F4036 = {
 			isa = PBXGroup;
 			children = (
 				AE380C451E76A240008F4036 /* PaoBa */,
 				AE380C441E76A240008F4036 /* Products */,
 				AE380CD31E77BFB7008F4036 /* Frameworks */,
+				2812F5D4693D70388AC09147 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -201,6 +464,7 @@
 		AE380C6F1E778A23008F4036 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				5A109E411F38369B0040FDCE /* Chat */,
 				AE380C8E1E77B9A4008F4036 /* Second */,
 				AE380C701E778A23008F4036 /* Main */,
 			);
@@ -225,6 +489,7 @@
 		AE380C7A1E778B30008F4036 /* BaseLogic */ = {
 			isa = PBXGroup;
 			children = (
+				5AE34FEF1F4685D900C8D795 /* BaseDB */,
 				AE380CEB1E795D00008F4036 /* BaseController */,
 				AE380CF81E795D8F008F4036 /* BaseRequest */,
 			);
@@ -292,6 +557,7 @@
 			isa = PBXGroup;
 			children = (
 				AE380CD41E77BFB8008F4036 /* AssetsLibrary.framework */,
+				1CF82584DDCF2215C7289D35 /* libPods-PaoBa.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -329,12 +595,14 @@
 			children = (
 				AE380CEC1E795D55008F4036 /* PBController.h */,
 				AE380CED1E795D55008F4036 /* PBController.m */,
-				AE380CEE1E795D55008F4036 /* PBCView.h */,
-				AE380CEF1E795D55008F4036 /* PBCView.m */,
+				AE380CEE1E795D55008F4036 /* PBView.h */,
+				AE380CEF1E795D55008F4036 /* PBView.m */,
 				AE380CF01E795D55008F4036 /* PBInteractor.h */,
 				AE380CF11E795D55008F4036 /* PBInteractor.m */,
 				AE380CF21E795D55008F4036 /* PBPresenter.h */,
 				AE380CF31E795D55008F4036 /* PBPresenter.m */,
+				5AE34FF61F468DC400C8D795 /* PBAdapter.h */,
+				5AE34FF71F468DC400C8D795 /* PBAdapter.m */,
 			);
 			path = BaseController;
 			sourceTree = "<group>";
@@ -362,6 +630,7 @@
 		AE380D051E7970DB008F4036 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				5A109E8A1F3837640040FDCE /* Common */,
 				AE380D061E7970DB008F4036 /* WeakTimer */,
 			);
 			path = Util;
@@ -383,9 +652,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE380C5A1E76A240008F4036 /* Build configuration list for PBXNativeTarget "PaoBa" */;
 			buildPhases = (
+				49CEBF859E47974225784F39 /* [CP] Check Pods Manifest.lock */,
 				AE380C3F1E76A240008F4036 /* Sources */,
 				AE380C401E76A240008F4036 /* Frameworks */,
 				AE380C411E76A240008F4036 /* Resources */,
+				478043CA09186F2D7A93DE8F /* [CP] Embed Pods Frameworks */,
+				8904930519572B7A1B6A4DD8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -442,6 +714,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		478043CA09186F2D7A93DE8F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PaoBa/Pods-PaoBa-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49CEBF859E47974225784F39 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8904930519572B7A1B6A4DD8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PaoBa/Pods-PaoBa-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AE380C3F1E76A240008F4036 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -449,31 +769,64 @@
 			files = (
 				AE380C731E778A38008F4036 /* PBMainController.m in Sources */,
 				AE380D121E7A5BB3008F4036 /* PBSocketChannelProxyRequest.m in Sources */,
+				5A109E7B1F38369B0040FDCE /* PBTalkInteractor.m in Sources */,
+				5A109E7F1F38369B0040FDCE /* ChatMessageCell.m in Sources */,
+				5A109E971F38387F0040FDCE /* NSAttributedString+PB.m in Sources */,
+				5A109E7D1F38369B0040FDCE /* ChatGiftMessageCell.m in Sources */,
 				AE380C891E77949D008F4036 /* PBMainView.m in Sources */,
+				5A109E941F3837980040FDCE /* UIFont+PB.m in Sources */,
+				5A109E841F38369B0040FDCE /* PBChatLabel.m in Sources */,
 				AE380D0C1E7A54BA008F4036 /* PBRequestEmitter.m in Sources */,
 				AE380C671E76A300008F4036 /* ServiceFactory.m in Sources */,
+				5A109E7C1F38369B0040FDCE /* PBTalkPresenter.m in Sources */,
+				5AE34FEE1F46814200C8D795 /* ChatLoadingMessage.m in Sources */,
+				5AE34FFE1F46B82F00C8D795 /* PBOwnUser.m in Sources */,
 				AE380D181E7AB32A008F4036 /* PBRequestCallBack.m in Sources */,
 				AE380C6E1E7787B9008F4036 /* NSObject+BaseController.m in Sources */,
+				5AE34FEB1F46812D00C8D795 /* ChatLoadCell.m in Sources */,
 				AE380CE81E795CA2008F4036 /* SystemPermissionServiceImpl.m in Sources */,
+				5A109E891F38369B0040FDCE /* PBTalkView.m in Sources */,
 				AE380CFB1E795DB1008F4036 /* PBRequestCommon.m in Sources */,
 				AE380C761E778ACB008F4036 /* PBMainInteractor.m in Sources */,
+				5A109E801F38369B0040FDCE /* ChatTextMessageCell.m in Sources */,
+				5A109E771F38369B0040FDCE /* ChatTextMessage.m in Sources */,
+				5A109E7A1F38369B0040FDCE /* PBTalkController.m in Sources */,
+				5A109E811F38369B0040FDCE /* ChatTipMessageCell.m in Sources */,
+				5A109E761F38369B0040FDCE /* ChatMessage.m in Sources */,
 				AE380C791E778B00008F4036 /* PBMainPresenter.m in Sources */,
+				5A109E7E1F38369B0040FDCE /* ChatMessageBaseUICell.m in Sources */,
+				5AE350011F46C5CC00C8D795 /* PBUserDefaults.m in Sources */,
 				AE380C9E1E77B9A4008F4036 /* PBSecondInteractor.m in Sources */,
+				5A109E871F38369B0040FDCE /* PBTalkTableHeaderView.m in Sources */,
+				5A109E861F38369B0040FDCE /* PBTalkInputBar.m in Sources */,
 				AE380C9D1E77B9A4008F4036 /* PBSecondController.m in Sources */,
 				AE380C4B1E76A240008F4036 /* AppDelegate.m in Sources */,
 				AE380CFE1E795DE4008F4036 /* PBGetUserProfileCallBack.m in Sources */,
 				AE380CDE1E77D51C008F4036 /* PBTestSubView.m in Sources */,
 				AE380CE91E795CA2008F4036 /* UserLogicServiceImpl.m in Sources */,
+				5AE34FF21F4685E700C8D795 /* PBDetailUser.m in Sources */,
+				5AE350051F47193200C8D795 /* PBTimeTool.m in Sources */,
 				AE380D091E7970DB008F4036 /* PBWeakTimerTarget.m in Sources */,
+				5A109E881F38369B0040FDCE /* PBTalkTextView.m in Sources */,
 				AE380CF61E795D55008F4036 /* PBInteractor.m in Sources */,
 				AE380CF71E795D55008F4036 /* PBPresenter.m in Sources */,
 				AE380D041E796F49008F4036 /* PBRequestManage.m in Sources */,
+				5AE34FFB1F4690C600C8D795 /* PBBottomView.m in Sources */,
+				5A109E791F38369B0040FDCE /* PBTalkAdapter.m in Sources */,
+				5A109E781F38369B0040FDCE /* ChatTipMessage.m in Sources */,
 				AE380CA01E77B9A4008F4036 /* PBSecondView.m in Sources */,
 				AE380C481E76A240008F4036 /* main.m in Sources */,
+				5A109E831F38369B0040FDCE /* PBMessageCellHelper.m in Sources */,
 				AE380C9F1E77B9A4008F4036 /* PBSecondPresenter.m in Sources */,
+				5AE34FE81F46790D00C8D795 /* UIImage+PB.m in Sources */,
+				5A109E911F38378A0040FDCE /* UIColor+PB.m in Sources */,
 				AE380D0F1E7A5B98008F4036 /* PBHttpChannelProxyRequest.m in Sources */,
 				AE380CF41E795D55008F4036 /* PBController.m in Sources */,
-				AE380CF51E795D55008F4036 /* PBCView.m in Sources */,
+				AE380CF51E795D55008F4036 /* PBView.m in Sources */,
+				5AE34FF51F468CDA00C8D795 /* PBTableView.m in Sources */,
+				5AE34FF81F468DC400C8D795 /* PBAdapter.m in Sources */,
+				5A109E751F38369B0040FDCE /* ChatGiftMessage.m in Sources */,
+				5A109E821F38369B0040FDCE /* ChatUnknowCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +934,7 @@
 		};
 		AE380C5B1E76A240008F4036 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B52F61447874709313537B44 /* Pods-PaoBa.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B776HGZTR8;
@@ -598,6 +952,7 @@
 		};
 		AE380C5C1E76A240008F4036 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98A07A8DE2797A764EAEC6D6 /* Pods-PaoBa.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B776HGZTR8;

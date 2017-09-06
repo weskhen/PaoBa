@@ -11,7 +11,13 @@
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
-#define PB_Debug 0
+
+#define SCREEN_SCALE [[UIScreen mainScreen] scale]
+#define SCREEN_SIZE         [UIScreen mainScreen].bounds.size
+#define SCREEN_WIDTH        SCREEN_SIZE.width
+#define SCREEN_HEIGHT       SCREEN_SIZE.height
+
+#define PB_DEBUG 1
 // 是否是iOS 7或者更高版本
 #define IS_IOS7_OR_HIGHER      (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0"))
 #define IS_IOS8_OR_HIGHER      (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0"))
@@ -24,17 +30,37 @@
 #define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
 #define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
 
+// 测试method执行时间, 限制在同一个method之内
+#define TICK   CFTimeInterval  startTime = CACurrentMediaTime();
+#define TOCK   TraceS(@">>>>>>Executing Time of %@: %f s>>>", NSStringFromSelector(_cmd), CACurrentMediaTime()-startTime);
 
-//#define PBSend(instance, protocol, selector, message) @try {[(id<protocol>)(instance) message]} @catch (NSException *exception) { NSLog(@"the protocol method error: self.baseController:%@   cannot find selector:%@",NSStringFromClass([instance class]),NSStringFromSelector(selector));} @finally {}
+//whether this string is empty
+#define ISEmptyString(str) (!str || str.length == 0)
+//UIImage命名
+#define PBIMAGE(name)  [UIImage imageNamed:name]
+//weakSelf 宏定义
+#define PBWEAKSELF    __weak __typeof(&*self)weakSelf = self;
+#define PBSTRONGSELF  __strong __typeof(weakSelf) strongSelf = weakSelf;
+//suppress warnning
+#define PBSuppressPerformSelectorLeakWarning(Stuff) \
+do { \
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Warc-performSelector-leaks\"") \
+Stuff; \
+_Pragma("clang diagnostic pop") \
+} while (0)
+
+
+#if PB_DEBUG
 
 #define PBSend(instance, protocol, message) [(id<protocol>)(instance) message]
-
-#if PB_Debug
-
+#define TraceS(NSString_format, ...) NSLog(@"%@", [NSString stringWithFormat:(NSString_format), ##__VA_ARGS__])
 
 #else
 
+#define PBSend(instance, protocol, selector, message) @try {[(id<protocol>)(instance) message]} @catch (NSException *exception) { NSLog(@"the protocol method error: self.baseController:%@   cannot find selector:%@",NSStringFromClass([instance class]),NSStringFromSelector(selector));} @finally {}
 
+#define TraceS(NSString_format, ...)
 #endif
 
 

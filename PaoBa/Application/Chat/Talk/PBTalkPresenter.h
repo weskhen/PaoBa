@@ -1,14 +1,13 @@
 //
-//  PBCView.h
+//  PBTalkPresenter.h
 //  PaoBa
 //
 //  Created by wujian on 2017/3/14.
 //  Copyright © 2017年 wujian. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "NSObject+BaseController.h"
+#import "PBPresenter.h"
 
-@interface PBCView : UIView
+@interface PBTalkPresenter : PBPresenter
 
 @end
