@@ -8,7 +8,7 @@
 
 #import "PBRequestManage.h"
 #import "PBWeakTimerTarget.h"
-#import "PBRequestCommon.h"
+#import "PBRequestConfig.h"
 
 @interface PBRequestManage ()
 
@@ -46,7 +46,7 @@
     @synchronized (self) {
         NSMutableArray* timeoutedArray=[NSMutableArray new];
         [self.reqMap enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-            PBRequestCommon* request=(PBRequestCommon*)obj;
+            PBRequestConfig* request=(PBRequestConfig*)obj;
             if([request isTimeouted]){
                 NSLog(@"reqid=%d,callback=%@ timeouted",request.reqId,request.delegate);
                 [timeoutedArray addObject:[NSNumber numberWithInt:request.reqId]];
@@ -67,7 +67,7 @@
     }
 }
 
-- (void)addReq:(PBRequestCommon *)req withId:(int)seqid
+- (void)addReqConfig:(PBRequestConfig *)req withId:(int)seqid
 {
     @synchronized(self)
     {
@@ -76,7 +76,7 @@
     }
 }
 
-- (void)removeReq:(PBRequestCommon *)req withId:(int)seqid
+- (void)removeReqConfig:(PBRequestConfig *)req withId:(int)seqid
 {
     @synchronized(self)
     {

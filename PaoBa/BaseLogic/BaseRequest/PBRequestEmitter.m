@@ -10,7 +10,7 @@
 #import "PBHttpChannelProxyRequest.h"
 #import "PBSocketChannelProxyRequest.h"
 #import "PBRequestManage.h"
-#import "PBRequestCommon.h"
+#import "PBRequestConfig.h"
 
 @interface PBRequestEmitter ()
 
@@ -32,20 +32,20 @@
         switchToSocket = [delegate switchToSocketChannel];
     }
     
-    PBRequestCommon *requestCommon = [PBRequestCommon new];
-    requestCommon.reqId = [[PBRequestManage sharedInstance] getNextReqId];
-    requestCommon.timeoutValue = timeoutValue;
-    requestCommon.isEncrypt = false;
-    [[PBRequestManage sharedInstance] addReq:requestCommon withId:requestCommon.reqId];
+    PBRequestConfig *requestConfig = [PBRequestConfig new];
+    requestConfig.reqId = [[PBRequestManage sharedInstance] getNextReqId];
+    requestConfig.timeoutValue = timeoutValue;
+    requestConfig.isEncrypt = false;
+    [[PBRequestManage sharedInstance] addReqConfig:requestConfig withId:requestConfig.reqId];
 
     if (switchToSocket) {
-        requestCommon.requestType = RequestType_SOCKET_TCP;
+        requestConfig.requestType = RequestType_SOCKET_TCP;
         //socket 失败后需要检查是否走http通道重试
-        [[PBSocketChannelProxyRequest sharedInstance] asyncCallWithMethod:method reqData:reqData timeout:timeoutValue delegate:(id <PBAsyncSocketDelegate>)requestCommon];
+        [[PBSocketChannelProxyRequest sharedInstance] asyncCallWithMethod:method reqData:reqData timeout:timeoutValue delegate:(id <PBAsyncSocketDelegate>)requestConfig];
     }
     else
     {
-        requestCommon.requestType = RequestType_HTTP;
+        requestConfig.requestType = RequestType_HTTP;
         PBHttpChannelProxyRequest *httpRequest = [PBHttpChannelProxyRequest new];
         [httpRequest sendAsyncRequestWithMethod:method rpcData:reqData delegate:delegate];
     }

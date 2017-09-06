@@ -7,7 +7,7 @@
 //
 
 #import "PBRequestCallBack.h"
-#import "PBRequestCommon.h"
+#import "PBRequestConfig.h"
 
 @implementation PBRequestCallBack
 

@@ -8,13 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@class PBRequestCommon;
+@class PBRequestConfig;
+
+/** 管理请求的类 **/
 @interface PBRequestManage : NSObject
 
 + (PBRequestManage *)sharedInstance;
 
 - (int)getNextReqId;
-- (void)addReq:(PBRequestCommon *)req withId:(int)seqid;
-- (void)removeReq:(PBRequestCommon *)req withId:(int)seqid;
+- (void)addReqConfig:(PBRequestConfig *)req withId:(int)seqid;
+- (void)removeReqConfig:(PBRequestConfig *)req withId:(int)seqid;
 
 @end

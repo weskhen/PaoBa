@@ -1,5 +1,5 @@
 //
-//  PBRequestCommon.h
+//  PBRequestConfig.h
 //  PaoBa
 //
 //  Created by wujian on 2017/3/15.
@@ -16,8 +16,9 @@ typedef enum : NSUInteger {
     RequestType_SOCKET_TCP = 1,
     RequestType_SOCKET_UDP,
 } RequestType;
+
 //请求的一些信息
-@interface PBRequestCommon : NSObject
+@interface PBRequestConfig : NSObject
 
 @property (nonatomic, assign) int reqId;
 @property (nonatomic, assign) int timeoutValue;

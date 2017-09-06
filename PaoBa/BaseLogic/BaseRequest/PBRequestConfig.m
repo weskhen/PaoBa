@@ -1,17 +1,17 @@
 //
-//  PBRequestCommon.m
+//  PBRequestConfig.m
 //  PaoBa
 //
 //  Created by wujian on 2017/3/15.
 //  Copyright © 2017年 wujian. All rights reserved.
 //
 
-#import "PBRequestCommon.h"
+#import "PBRequestConfig.h"
 #import "PBSocketProtocol.h"
 #import "PBRequestManage.h"
 #import "PBHttpChannelProxyRequest.h"
 
-@interface PBRequestCommon ()<PBAsyncSocketDelegate>
+@interface PBRequestConfig ()<PBAsyncSocketDelegate>
 
 @property (nonatomic, assign) time_t startTime;
 @property (nonatomic, assign) int currentRetryCount;
@@ -19,7 +19,7 @@
 @property (nonatomic, assign) int reqFailedCount;
 @end
 
-@implementation PBRequestCommon
+@implementation PBRequestConfig
 
 - (instancetype)init
 {
@@ -64,7 +64,7 @@
     }
     //移除协议 防止多次进去
     self.delegate = nil;
-    [[PBRequestManage sharedInstance] removeReq:self withId:temSeqId];
+    [[PBRequestManage sharedInstance] removeReqConfig:self withId:temSeqId];
 }
 
 - (void)responseFail:(NSString *)method forReqParam:(NSData *)reqData forError:(NSError *)error
@@ -97,7 +97,7 @@
     }
     //移除协议 防止多次进去
     self.delegate = nil;
-    [[PBRequestManage sharedInstance] removeReq:self withId:temSeqId];
+    [[PBRequestManage sharedInstance] removeReqConfig:self withId:temSeqId];
 }
 
 @end

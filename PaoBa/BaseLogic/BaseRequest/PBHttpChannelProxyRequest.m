@@ -15,6 +15,7 @@
 - (void)sendAsyncRequestWithMethod:(NSString *)method rpcData:(NSData *)rpcData delegate:(id<PBRequestEmitterDelegate>)delegate
 {
     //对网络封装 发送请求
+    
 }
 
 - (void)sendSyncRequestWithMethod:(NSString *)method rpcData:(NSData *)rpcData delegate:(id<PBRequestEmitterDelegate>)delegate

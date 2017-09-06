@@ -63,7 +63,7 @@
 		AE380CF51E795D55008F4036 /* PBView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380CEF1E795D55008F4036 /* PBView.m */; };
 		AE380CF61E795D55008F4036 /* PBInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380CF11E795D55008F4036 /* PBInteractor.m */; };
 		AE380CF71E795D55008F4036 /* PBPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380CF31E795D55008F4036 /* PBPresenter.m */; };
-		AE380CFB1E795DB1008F4036 /* PBRequestCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380CFA1E795DB1008F4036 /* PBRequestCommon.m */; };
+		AE380CFB1E795DB1008F4036 /* PBRequestConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380CFA1E795DB1008F4036 /* PBRequestConfig.m */; };
 		AE380CFE1E795DE4008F4036 /* PBGetUserProfileCallBack.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380CFD1E795DE4008F4036 /* PBGetUserProfileCallBack.m */; };
 		AE380D041E796F49008F4036 /* PBRequestManage.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380D031E796F49008F4036 /* PBRequestManage.m */; };
 		AE380D091E7970DB008F4036 /* PBWeakTimerTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380D081E7970DB008F4036 /* PBWeakTimerTarget.m */; };
@@ -199,8 +199,8 @@
 		AE380CF11E795D55008F4036 /* PBInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBInteractor.m; sourceTree = "<group>"; };
 		AE380CF21E795D55008F4036 /* PBPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBPresenter.h; sourceTree = "<group>"; };
 		AE380CF31E795D55008F4036 /* PBPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBPresenter.m; sourceTree = "<group>"; };
-		AE380CF91E795DB1008F4036 /* PBRequestCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBRequestCommon.h; sourceTree = "<group>"; };
-		AE380CFA1E795DB1008F4036 /* PBRequestCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBRequestCommon.m; sourceTree = "<group>"; };
+		AE380CF91E795DB1008F4036 /* PBRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBRequestConfig.h; sourceTree = "<group>"; };
+		AE380CFA1E795DB1008F4036 /* PBRequestConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBRequestConfig.m; sourceTree = "<group>"; };
 		AE380CFC1E795DE4008F4036 /* PBGetUserProfileCallBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBGetUserProfileCallBack.h; sourceTree = "<group>"; };
 		AE380CFD1E795DE4008F4036 /* PBGetUserProfileCallBack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBGetUserProfileCallBack.m; sourceTree = "<group>"; };
 		AE380D021E796F49008F4036 /* PBRequestManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBRequestManage.h; sourceTree = "<group>"; };
@@ -611,8 +611,8 @@
 			isa = PBXGroup;
 			children = (
 				AE380D131E7A7C5F008F4036 /* PBSocketProtocol.h */,
-				AE380CF91E795DB1008F4036 /* PBRequestCommon.h */,
-				AE380CFA1E795DB1008F4036 /* PBRequestCommon.m */,
+				AE380CF91E795DB1008F4036 /* PBRequestConfig.h */,
+				AE380CFA1E795DB1008F4036 /* PBRequestConfig.m */,
 				AE380D0D1E7A5B98008F4036 /* PBHttpChannelProxyRequest.h */,
 				AE380D0E1E7A5B98008F4036 /* PBHttpChannelProxyRequest.m */,
 				AE380D101E7A5BB3008F4036 /* PBSocketChannelProxyRequest.h */,
@@ -786,7 +786,7 @@
 				5AE34FEB1F46812D00C8D795 /* ChatLoadCell.m in Sources */,
 				AE380CE81E795CA2008F4036 /* SystemPermissionServiceImpl.m in Sources */,
 				5A109E891F38369B0040FDCE /* PBTalkView.m in Sources */,
-				AE380CFB1E795DB1008F4036 /* PBRequestCommon.m in Sources */,
+				AE380CFB1E795DB1008F4036 /* PBRequestConfig.m in Sources */,
 				AE380C761E778ACB008F4036 /* PBMainInteractor.m in Sources */,
 				5A109E801F38369B0040FDCE /* ChatTextMessageCell.m in Sources */,
 				5A109E771F38369B0040FDCE /* ChatTextMessage.m in Sources */,
