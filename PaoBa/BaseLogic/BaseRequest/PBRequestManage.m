@@ -7,7 +7,6 @@
 //
 
 #import "PBRequestManage.h"
-#import "PBWeakTimerTarget.h"
 #import "PBRequestConfig.h"
 
 @interface PBRequestManage ()
@@ -36,7 +35,7 @@
     if (self) {
         self.reqMap = [[NSMutableDictionary alloc] init];
         self.reqSequence = 0;
-        self.timer = [PBWeakTimerTarget scheduledTimerWithTimeInterval:1 target:self selector:@selector(checkTimeout) userInfo:nil repeats:true];
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(checkTimeout) userInfo:nil repeats:true];
     }
     return self;
 }

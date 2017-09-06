@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+
+@protocol PBHttpResponseDelegate <NSObject>
+
+- (void)responseSuccess:(NSString *) method forReqParam:(NSData *) reqData forRspData:(NSData *) rspData;
+- (void)responseFail:(NSString *) method forReqParam:(NSData *) reqData forError:(NSError *) error;
+
+@end
+
 @protocol PBAsyncSocketDelegate <NSObject>
 
 

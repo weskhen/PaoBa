@@ -16,7 +16,7 @@
 {
     self = [super init];
     if (self) {
-        self.ReqFailRetryCount = 0;
+        self.reqFailRetryCount = 0;
         self.timeoutValue = PBKCallTimeout;
     }
     return self;
@@ -39,10 +39,16 @@
     return self.useSocketOnFirstTry;
 }
 
-//第一次请求失败后尝试http通道
+// socket通道请求失败后尝试http通道
 - (BOOL)shouldTryHttpChannelOnFail
 {
-    return self.shouldTryHttpChannelOnFail;
+    return self.useHttpOnFirstFail;
+}
+
+//http通道请求失败后尝试socket通道
+- (BOOL)shouldTrySocketChannelOnFail
+{
+    return self.useSocketOnFirstFail;
 }
 
 //获取自定义的请求超时时间
@@ -58,6 +64,6 @@
 
 - (int)getRequestFailRetryCount
 {
-    return self.ReqFailRetryCount;
+    return self.reqFailRetryCount;
 }
 @end

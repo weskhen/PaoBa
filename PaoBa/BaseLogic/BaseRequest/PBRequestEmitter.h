@@ -11,31 +11,68 @@
 @protocol PBRequestEmitterDelegate <NSObject>
 
 @required
+/**
+ * @brif 请求成功
+ **/
 - (void)onCallSuccess:(NSData*)rspData;
+
+/**
+ * @brif 请求失败
+ **/
 - (void)onCallFail:(NSError*)errorInfo;
 
 @optional
-//第一次请求是否切换到Socket通道
+
+/**
+ * @brif 当前请求失败 count 第几次重试
+ **/
+- (void)onCallFailRequest:(NSError *)errorInfo retryCount:(int)count;
+
+/**
+ * @brif 第一次请求是否切换到Socket通道
+ **/
 - (BOOL)switchToSocketChannel;
 
-//第一次请求失败后尝试http通道
+
+/**
+ * @brif socket通道请求失败后尝试http通道
+ **/
 - (BOOL)shouldTryHttpChannelOnFail;
 
-//获取自定义的请求超时时间
+
+/**
+ * @brif http通道请求失败后尝试socket通道
+ **/
+- (BOOL)shouldTrySocketChannelOnFail;
+
+/**
+ * @brif 获取自定义的请求超时时间
+ **/
 - (int)getCustomTimeoutValue;
 
+/**
+ * @brif 获取请求的URL
+ **/
 - (NSString*)getRequestURL;
 
+/**
+ * @brif 获取请求失败重试次数
+ **/
 - (int)getRequestFailRetryCount;
+
 @end
 
 //请求发射器 app 请求通过这个类去分发实现
 @interface PBRequestEmitter : NSObject
 
-/** http/tcp请求 **/
+/** 
+ * @brif http/tcp请求 
+ **/
 + (void)asyncRequestWithMethod:(NSString *)method reqData:(NSData *)reqData delegate:(id<PBRequestEmitterDelegate>)delegate;
 
-/** udp请求 **/
+/** 
+ * @brif udp请求
+ **/
 + (void)notifyCallWithMethod:(NSString *)method reqData:(NSData *)reqData;
 
 @end

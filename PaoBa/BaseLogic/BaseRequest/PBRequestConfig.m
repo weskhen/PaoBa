@@ -35,7 +35,7 @@
 
 - (void)dealloc
 {
-    
+    NSLog(@"PBRequestConfig dealloc");
 }
 
 #pragma mark - privateMethod
@@ -75,29 +75,37 @@
         tryHttpOnFail = [self.delegate shouldTryHttpChannelOnFail];
     }
     
-    BOOL endRequest = NO; //是否结束请求
+    BOOL stopRequest = NO; //是否结束请求
     if (self.currentRetryCount <= self.reqFailedCount) {
-        endRequest = YES;
+        stopRequest = YES;
     }
     else
     {
         self.reqFailedCount ++;
+        if (self.delegate && [self.delegate respondsToSelector:@selector(onCallFailRequest:retryCount:)]) {
+            [self.delegate onCallFailRequest:error retryCount:self.reqFailedCount];
+        }
     }
-    
-    if (endRequest == NO && tryHttpOnFail) {
-        self.requestType = RequestType_HTTP;
-        PBHttpChannelProxyRequest *httpRequest = [PBHttpChannelProxyRequest new];
-        [httpRequest sendAsyncRequestWithMethod:method rpcData:reqData delegate:self.delegate];
+
+    if (stopRequest) {
+        //移除协议 防止多次进去
+        self.delegate = nil;
+        [[PBRequestManage sharedInstance] removeReqConfig:self withId:temSeqId];
     }
     else
     {
-        if (self.delegate && [self.delegate respondsToSelector:@selector(onCallFail:)]) {
-            [self.delegate onCallFail:error];
+        if (tryHttpOnFail) {
+            self.requestType = RequestType_HTTP;
+            PBHttpChannelProxyRequest *httpRequest = [PBHttpChannelProxyRequest new];
+            [httpRequest sendAsyncRequestWithMethod:method rpcData:reqData delegate:self.delegate];
+        }
+        else
+        {
+            if (self.delegate && [self.delegate respondsToSelector:@selector(onCallFail:)]) {
+                [self.delegate onCallFail:error];
+            }
         }
     }
-    //移除协议 防止多次进去
-    self.delegate = nil;
-    [[PBRequestManage sharedInstance] removeReqConfig:self withId:temSeqId];
 }
 
 @end

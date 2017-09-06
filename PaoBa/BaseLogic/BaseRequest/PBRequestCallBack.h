@@ -14,10 +14,28 @@
 typedef void (^CallBackFailedBlock)(NSError *error);
 typedef void (^CallBackSuccessBlock)();
 
-@property (nonatomic, assign)  BOOL useSocketOnFirstTry; //第一次就使用http通道
-@property (nonatomic, assign)  BOOL useHttpOnFirstFail; //第一次使用socket通道，失败后再尝试http通道
+/**
+ *  @brif 第一次就使用http通道
+ **/
+@property (nonatomic, assign)  BOOL useSocketOnFirstTry;
+/**
+ * @brif 第一次使用socket通道，失败后再尝试http通道
+ **/
+@property (nonatomic, assign)  BOOL useHttpOnFirstFail;
+
+/**
+ * @brif 第一次使用http通道，失败后再尝试socket通道
+ **/
+@property (nonatomic, assign)  BOOL useSocketOnFirstFail;
+
+/**
+ * @brif 请求超时时间
+ **/
 @property (nonatomic, assign)  int  timeoutValue;
 
-@property (nonatomic, assign)  int  ReqFailRetryCount;
+/**
+ * @brif 接口请求失败重试次数
+ **/
+@property (nonatomic, assign)  int  reqFailRetryCount;
 
 @end
