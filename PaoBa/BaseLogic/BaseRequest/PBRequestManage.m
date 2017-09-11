@@ -8,6 +8,7 @@
 
 #import "PBRequestManage.h"
 #import "PBRequestConfig.h"
+#import "PBNetworking.h"
 
 @interface PBRequestManage ()
 
@@ -49,7 +50,7 @@
             if([request isTimeouted]){
                 NSLog(@"reqid=%d,callback=%@ timeouted",request.reqId,request.delegate);
                 [timeoutedArray addObject:[NSNumber numberWithInt:request.reqId]];
-                [request.delegate onCallFail:nil];
+                [request.delegate onCallFail:nil serverRequestsStatus:PBServerRequestsStatusconnectedTimeOut networkReachabilityStatus:[PBNetworking appNetworkReachabilityStatus]];
             }
         }];
         for(NSNumber* timeoutReqId in timeoutedArray){

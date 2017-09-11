@@ -14,14 +14,19 @@
 /**
  * @brif 请求成功
  **/
-- (void)onCallSuccess:(NSData*)rspData;
+- (void)onCallSuccess:(NSData*)rspData serverRequestsStatus:(PBServerRequestsStatus)requestsStatus networkReachabilityStatus:(PBNetworkReachabilityStatus)reachabilityStatus;
 
 /**
  * @brif 请求失败
  **/
-- (void)onCallFail:(NSError*)errorInfo;
+- (void)onCallFail:(NSError*)errorInfo serverRequestsStatus:(PBServerRequestsStatus)requestsStatus networkReachabilityStatus:(PBNetworkReachabilityStatus)reachabilityStatus;
 
 @optional
+
+/**
+ * @brif 获取请求的URL
+ **/
+- (NSString*)getRequestURL;
 
 /**
  * @brif 当前请求失败 count 第几次重试
@@ -49,11 +54,6 @@
  * @brif 获取自定义的请求超时时间
  **/
 - (int)getCustomTimeoutValue;
-
-/**
- * @brif 获取请求的URL
- **/
-- (NSString*)getRequestURL;
 
 /**
  * @brif 获取请求失败重试次数

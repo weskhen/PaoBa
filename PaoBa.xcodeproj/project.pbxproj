@@ -71,6 +71,7 @@
 		AE380D0F1E7A5B98008F4036 /* PBHttpChannelProxyRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380D0E1E7A5B98008F4036 /* PBHttpChannelProxyRequest.m */; };
 		AE380D121E7A5BB3008F4036 /* PBSocketChannelProxyRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380D111E7A5BB3008F4036 /* PBSocketChannelProxyRequest.m */; };
 		AE380D181E7AB32A008F4036 /* PBRequestCallBack.m in Sources */ = {isa = PBXBuildFile; fileRef = AE380D171E7AB32A008F4036 /* PBRequestCallBack.m */; };
+		E034E21E1F5FF7D700CB91EE /* PBNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = E034E21D1F5FF7D700CB91EE /* PBNetworking.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -213,10 +214,13 @@
 		AE380D0E1E7A5B98008F4036 /* PBHttpChannelProxyRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBHttpChannelProxyRequest.m; sourceTree = "<group>"; };
 		AE380D101E7A5BB3008F4036 /* PBSocketChannelProxyRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBSocketChannelProxyRequest.h; sourceTree = "<group>"; };
 		AE380D111E7A5BB3008F4036 /* PBSocketChannelProxyRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBSocketChannelProxyRequest.m; sourceTree = "<group>"; };
-		AE380D131E7A7C5F008F4036 /* PBSocketProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBSocketProtocol.h; sourceTree = "<group>"; };
+		AE380D131E7A7C5F008F4036 /* PBNetworkProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBNetworkProtocol.h; sourceTree = "<group>"; };
 		AE380D161E7AB32A008F4036 /* PBRequestCallBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBRequestCallBack.h; sourceTree = "<group>"; };
 		AE380D171E7AB32A008F4036 /* PBRequestCallBack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBRequestCallBack.m; sourceTree = "<group>"; };
 		B52F61447874709313537B44 /* Pods-PaoBa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaoBa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PaoBa/Pods-PaoBa.debug.xcconfig"; sourceTree = "<group>"; };
+		E034E21C1F5FF7D700CB91EE /* PBNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBNetworking.h; sourceTree = "<group>"; };
+		E034E21D1F5FF7D700CB91EE /* PBNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBNetworking.m; sourceTree = "<group>"; };
+		E03EE5E41F666B14003F1A83 /* PBCallBackDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PBCallBackDefine.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -610,7 +614,9 @@
 		AE380CF81E795D8F008F4036 /* BaseRequest */ = {
 			isa = PBXGroup;
 			children = (
-				AE380D131E7A7C5F008F4036 /* PBSocketProtocol.h */,
+				E034E21C1F5FF7D700CB91EE /* PBNetworking.h */,
+				E034E21D1F5FF7D700CB91EE /* PBNetworking.m */,
+				AE380D131E7A7C5F008F4036 /* PBNetworkProtocol.h */,
 				AE380CF91E795DB1008F4036 /* PBRequestConfig.h */,
 				AE380CFA1E795DB1008F4036 /* PBRequestConfig.m */,
 				AE380D0D1E7A5B98008F4036 /* PBHttpChannelProxyRequest.h */,
@@ -623,6 +629,7 @@
 				AE380D031E796F49008F4036 /* PBRequestManage.m */,
 				AE380D161E7AB32A008F4036 /* PBRequestCallBack.h */,
 				AE380D171E7AB32A008F4036 /* PBRequestCallBack.m */,
+				E03EE5E41F666B14003F1A83 /* PBCallBackDefine.h */,
 			);
 			path = BaseRequest;
 			sourceTree = "<group>";
@@ -771,6 +778,7 @@
 				AE380D121E7A5BB3008F4036 /* PBSocketChannelProxyRequest.m in Sources */,
 				5A109E7B1F38369B0040FDCE /* PBTalkInteractor.m in Sources */,
 				5A109E7F1F38369B0040FDCE /* ChatMessageCell.m in Sources */,
+				E034E21E1F5FF7D700CB91EE /* PBNetworking.m in Sources */,
 				5A109E971F38387F0040FDCE /* NSAttributedString+PB.m in Sources */,
 				5A109E7D1F38369B0040FDCE /* ChatGiftMessageCell.m in Sources */,
 				AE380C891E77949D008F4036 /* PBMainView.m in Sources */,

@@ -22,15 +22,66 @@
     return self;
 }
 
+- (id)parseFormPesponseData:(id)responseData
+{
+    if ([responseData isKindOfClass:[NSData class]]) {
+        // 尝试解析成JSON
+        if (responseData == nil) {
+            return responseData;
+        } else {
+            NSError *error = nil;
+            NSDictionary *response = [NSJSONSerialization JSONObjectWithData:responseData
+                                                                     options:NSJSONReadingMutableContainers
+                                                                       error:&error];
+            
+            if (error != nil) {
+                return responseData;
+            } else {
+                return response;
+            }
+        }
+    }
+    else {
+        return responseData;
+    }
+}
+
 #pragma mark - PBRequestEmitterDelegate
-- (void)onCallSuccess:(NSData *)rspData
+- (void)onCallSuccess:(NSDictionary *)rspDictionary
 {
     
 }
 
-- (void)onCallFail:(NSError *)errorInfo
+- (void)onCallFail:(NSError *)error networkReachabilityStatus:(PBNetworkReachabilityStatus)reachabilityStatus
 {
-    
+
+}
+
+#pragma mark - RequestEmitterDelegate
+- (void)onCallSuccess:(NSData *)rspData serverRequestsStatus:(PBServerRequestsStatus)requestsStatus networkReachabilityStatus:(PBNetworkReachabilityStatus)reachabilityStatus
+{
+    id responseData = [self parseFormPesponseData:rspData];
+    if ([responseData isKindOfClass:[NSDictionary class]]) {
+        NSDictionary *errorDic = [responseData objectForKey:@"error"];
+        if (errorDic && [[errorDic objectForKey:@"code"] intValue] == 0) {
+            //返回正常数据
+            [self onCallSuccess:responseData];
+        }
+        else
+        {
+            NSError *error = [NSError errorWithDomain:@"PBCustomDomain" code:-999 userInfo:errorDic];
+            [self onCallFail:error networkReachabilityStatus:reachabilityStatus];
+        }
+    }
+    else
+    {
+        NSLog(@"server 返回的数据格式有问题！！！！！");
+    }
+}
+
+- (void)onCallFail:(NSError *)errorInfo serverRequestsStatus:(PBServerRequestsStatus)requestsStatus networkReachabilityStatus:(PBNetworkReachabilityStatus)reachabilityStatus
+{
+    [self onCallFail:errorInfo networkReachabilityStatus:reachabilityStatus];
 }
 
 //第一次请求是否切换到Socket通道

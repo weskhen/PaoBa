@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PBSocketProtocol.h"
+#import "PBNetworkProtocol.h"
 
 @class PBRequestConfig;
 @interface PBSocketChannelProxyRequest : NSObject

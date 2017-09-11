@@ -8,7 +8,7 @@
 
 #import "PBSocketChannelProxyRequest.h"
 #import "PBRequestEmitter.h"
-#import "PBSocketProtocol.h"
+#import "PBNetworkProtocol.h"
 
 @interface PBSocketChannelProxyRequest ()
 

@@ -1,5 +1,5 @@
 //
-//  PBSocketProtocol.h
+//  PBNetworkProtocol.h
 //  PaoBa
 //
 //  Created by wujian on 2017/3/16.
@@ -8,12 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-
 @protocol PBHttpResponseDelegate <NSObject>
 
-- (void)responseSuccess:(NSString *) method forReqParam:(NSData *) reqData forRspData:(NSData *) rspData;
-- (void)responseFail:(NSString *) method forReqParam:(NSData *) reqData forError:(NSError *) error;
+- (void)httpResponseSuccess:(NSString *)method forReqParam:(NSData *)reqData forRspData:(NSData *)rspData serverRequestsStatus:(PBServerRequestsStatus)requestsStatus networkReachabilityStatus:(PBNetworkReachabilityStatus)reachabilityStatus;
 
+- (void)httpResponseFail:(NSString *)method forReqParam:(NSData *)reqData forError:(NSError *)error serverRequestsStatus:(PBServerRequestsStatus)requestsStatus networkReachabilityStatus:(PBNetworkReachabilityStatus)reachabilityStatus;
+
+- (NSString *)getRequestURL;
 @end
 
 @protocol PBAsyncSocketDelegate <NSObject>

@@ -7,9 +7,10 @@
 //
 
 #import "PBRequestConfig.h"
-#import "PBSocketProtocol.h"
+#import "PBNetworkProtocol.h"
 #import "PBRequestManage.h"
 #import "PBHttpChannelProxyRequest.h"
+#import "PBNetworking.h"
 
 @interface PBRequestConfig ()<PBAsyncSocketDelegate>
 
@@ -55,12 +56,11 @@
 
 
 #pragma mark - PBAsyncSocketDelegate
-
 - (void)responseSuccess:(NSString *)method forReqParam:(NSData *)reqData forRspData:(NSData *)rspData
 {
     int temSeqId = self.reqId;
-    if (self.delegate && [self.delegate respondsToSelector:@selector(onCallSuccess:)]) {
-        [self.delegate onCallSuccess:rspData];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(onCallSuccess:serverRequestsStatus:networkReachabilityStatus:)]) {
+        [self.delegate onCallSuccess:rspData serverRequestsStatus:PBServerRequestsStatusSuccess networkReachabilityStatus:[PBNetworking appNetworkReachabilityStatus]];
     }
     //移除协议 防止多次进去
     self.delegate = nil;
@@ -86,7 +86,7 @@
             [self.delegate onCallFailRequest:error retryCount:self.reqFailedCount];
         }
     }
-
+    
     if (stopRequest) {
         //移除协议 防止多次进去
         self.delegate = nil;
@@ -101,11 +101,70 @@
         }
         else
         {
-            if (self.delegate && [self.delegate respondsToSelector:@selector(onCallFail:)]) {
-                [self.delegate onCallFail:error];
+            if (self.delegate && [self.delegate respondsToSelector:@selector(onCallFail:serverRequestsStatus:networkReachabilityStatus:)]) {
+                [self.delegate onCallFail:error serverRequestsStatus:PBServerRequestsStatusFail networkReachabilityStatus:[PBNetworking appNetworkReachabilityStatus]];
             }
         }
     }
+}
+
+
+#pragma mark - PBHttpResponseDelegate
+- (void)httpResponseSuccess:(NSString *)method forReqParam:(NSData *)reqData forRspData:(NSData *)rspData serverRequestsStatus:(PBServerRequestsStatus)requestsStatus networkReachabilityStatus:(PBNetworkReachabilityStatus)reachabilityStatus
+{
+    int temSeqId = self.reqId;
+    if (self.delegate && [self.delegate respondsToSelector:@selector(onCallSuccess:serverRequestsStatus:networkReachabilityStatus:)]) {
+        [self.delegate onCallSuccess:rspData serverRequestsStatus:requestsStatus networkReachabilityStatus:reachabilityStatus];
+    }
+    //移除协议 防止多次进去
+    self.delegate = nil;
+    [[PBRequestManage sharedInstance] removeReqConfig:self withId:temSeqId];
+}
+
+- (void)httpResponseFail:(NSString *)method forReqParam:(NSData *)reqData forError:(NSError *)error serverRequestsStatus:(PBServerRequestsStatus)requestsStatus networkReachabilityStatus:(PBNetworkReachabilityStatus)reachabilityStatus
+{
+    int temSeqId = self.reqId;
+    BOOL trySocketOnFail = false;
+    if ([self.delegate respondsToSelector:@selector(shouldTrySocketChannelOnFail)]) {
+        trySocketOnFail = [self.delegate shouldTrySocketChannelOnFail];
+    }
+    
+    BOOL stopRequest = NO; //是否结束请求
+    if (self.currentRetryCount <= self.reqFailedCount) {
+        stopRequest = YES;
+    }
+    else
+    {
+        self.reqFailedCount ++;
+        if (self.delegate && [self.delegate respondsToSelector:@selector(onCallFailRequest:retryCount:)]) {
+            [self.delegate onCallFailRequest:error retryCount:self.reqFailedCount];
+        }
+    }
+    
+    if (stopRequest) {
+        //移除协议 防止多次进去
+        self.delegate = nil;
+        [[PBRequestManage sharedInstance] removeReqConfig:self withId:temSeqId];
+    }
+    else
+    {
+        if (trySocketOnFail) {
+            if (self.delegate && [self.delegate respondsToSelector:@selector(onCallFail:serverRequestsStatus:networkReachabilityStatus:)]) {
+                [self.delegate onCallFail:error serverRequestsStatus:requestsStatus networkReachabilityStatus:reachabilityStatus];
+            }
+        }
+        else
+        {
+            self.requestType = RequestType_HTTP;
+            PBHttpChannelProxyRequest *httpRequest = [PBHttpChannelProxyRequest new];
+            [httpRequest sendAsyncRequestWithMethod:method rpcData:reqData delegate:self];
+        }
+    }
+}
+
+- (NSString *)getRequestURL
+{
+    return self.baseUrl;
 }
 
 @end

@@ -46,6 +46,7 @@ static dispatch_queue_t serviceQueue = NULL;
     }
     return self;
 }
+
 -(void)startAllService
 {
     if(self.isStarted){

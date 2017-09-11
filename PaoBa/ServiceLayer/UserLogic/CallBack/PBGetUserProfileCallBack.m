@@ -38,13 +38,14 @@
 - (void)getUserProfileFromServerWithUserId:(NSNumber *)userId
 {
     NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
-    [dic setObject:userId forKey:@"userId"];
+    [dic setObject:@(0) forKey:@"codeType"];
+    [dic setObject:@"18768177617" forKey:@"mobile"];
+    
     NSData *reqData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
-    [PBRequestEmitter asyncRequestWithMethod:@"getUserProfile.userId" reqData:reqData delegate:self];
+    [PBRequestEmitter asyncRequestWithMethod:@"POST.verification/get" reqData:reqData delegate:self];
 }
 
-
-- (void)onCallSuccess:(NSData *)rspData
+- (void)onCallSuccess:(NSDictionary *)rspDictionary
 {
     if (self.delegate && [self.delegate respondsToSelector:@selector(onGetUserProfileSuccess:)]) {
         [self.delegate onGetUserProfileSuccess:nil];
@@ -56,15 +57,19 @@
     }
 }
 
-- (void)onCallFail:(NSError *)errorInfo
+- (void)onCallFail:(NSError *)error networkReachabilityStatus:(PBNetworkReachabilityStatus)reachabilityStatus
 {
     if (self.delegate && [self.delegate respondsToSelector:@selector(onGetUserProfileFail:)]) {
-        [self.delegate onGetUserProfileFail:errorInfo];
+        [self.delegate onGetUserProfileFail:error];
     }
-
+    
     if (self.failedBlock) {
-        self.failedBlock(errorInfo);
+        self.failedBlock(error);
     }
 }
 
+- (NSString *)getRequestURL
+{
+    return @"http://10.0.0.4:8081";
+}
 @end

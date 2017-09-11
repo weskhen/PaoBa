@@ -24,9 +24,11 @@ typedef enum : NSUInteger {
 @property (nonatomic, assign) int timeoutValue;
 @property (nonatomic, assign) BOOL isEncrypt;
 
+@property (nonatomic, copy) NSString *baseUrl;
+
 @property (nonatomic, assign) RequestType requestType; //0 http 1 socket
 
-@property (nonatomic, weak) id <PBRequestEmitterDelegate> delegate;
+@property (nonatomic, strong) id <PBRequestEmitterDelegate> delegate; //hood
 - (BOOL)isTimeouted;
 
 - (void)setRequestFailRetryCount:(int)retryCount;
