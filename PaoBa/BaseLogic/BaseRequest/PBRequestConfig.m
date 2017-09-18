@@ -88,6 +88,9 @@
     }
     
     if (stopRequest) {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(onCallFail:serverRequestsStatus:networkReachabilityStatus:)]) {
+            [self.delegate onCallFail:error serverRequestsStatus:PBServerRequestsStatusFail networkReachabilityStatus:[PBNetworking appNetworkReachabilityStatus]];
+        }
         //移除协议 防止多次进去
         self.delegate = nil;
         [[PBRequestManage sharedInstance] removeReqConfig:self withId:temSeqId];
@@ -101,9 +104,9 @@
         }
         else
         {
-            if (self.delegate && [self.delegate respondsToSelector:@selector(onCallFail:serverRequestsStatus:networkReachabilityStatus:)]) {
-                [self.delegate onCallFail:error serverRequestsStatus:PBServerRequestsStatusFail networkReachabilityStatus:[PBNetworking appNetworkReachabilityStatus]];
-            }
+            //TCP
+            self.requestType = RequestType_SOCKET_TCP;
+
         }
     }
 }
@@ -142,6 +145,9 @@
     }
     
     if (stopRequest) {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(onCallFail:serverRequestsStatus:networkReachabilityStatus:)]) {
+            [self.delegate onCallFail:error serverRequestsStatus:requestsStatus networkReachabilityStatus:reachabilityStatus];
+        }
         //移除协议 防止多次进去
         self.delegate = nil;
         [[PBRequestManage sharedInstance] removeReqConfig:self withId:temSeqId];
@@ -149,9 +155,9 @@
     else
     {
         if (trySocketOnFail) {
-            if (self.delegate && [self.delegate respondsToSelector:@selector(onCallFail:serverRequestsStatus:networkReachabilityStatus:)]) {
-                [self.delegate onCallFail:error serverRequestsStatus:requestsStatus networkReachabilityStatus:reachabilityStatus];
-            }
+            self.requestType = RequestType_SOCKET_TCP;
+            //TCP
+            
         }
         else
         {
